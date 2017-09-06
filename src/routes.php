@@ -7,17 +7,22 @@
  */
 
 
-Route::resource('stories', "\ShawnSandy\Backstory\App\StoryController",
+
+ Route::group(['prefix' => 'story'], function () {
+     //
+
+
+    Route::resource('/', "\ShawnSandy\Backstory\App\Controllers\StoryController",
     ['only' => ["store", "update", "destroy"]]);
 
-Route::resource('story-category', "\ShawnSandy\Backstory\App\CategoriesController",
+    Route::resource('category', "\ShawnSandy\Backstory\App\Controllers\CategoriesController",
     ['only' => ["store", "update", "destroy"]]);
 
-Route::resource('story-attachments', "\ShawnSandy\Backstory\App\AttachmentsController",
-    ['only' => ["store", "update", "destroy"]]);
-
-
-Route::resource('story-options', "\ShawnSandy\Backstory\App\OptionsController",
+    Route::resource('attachments', "\ShawnSandy\Backstory\App\Controllers\AttachmentsController",
     ['only' => ["store", "update", "destroy"]]);
 
 
+    Route::resource('options', "\ShawnSandy\Backstory\App\Controllers\OptionsController",
+    ['only' => ["store", "update", "destroy"]]);
+
+ });

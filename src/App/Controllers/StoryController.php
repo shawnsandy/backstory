@@ -6,7 +6,7 @@
  * Time: 2:24 PM
  */
 
-namespace ShawnSandy\Backstory\App;
+namespace ShawnSandy\Backstory\App\Controllers;
 
 
 use Illuminate\Routing\Controller;

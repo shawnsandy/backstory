@@ -1,17 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: shawnsandy
- * Date: 9/5/17
- * Time: 3:01 PM
- */
 
-namespace ShawnSandy\Backstory\App;
+
+namespace ShawnSandy\Backstory\App\Controllers;
 
 
 use Illuminate\Routing\Controller;
 
-class OptionsController extends Controller
+class AttachmentsController extends Controller
 {
 
     public function store() {
