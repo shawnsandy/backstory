@@ -15,12 +15,16 @@
     Route::resource('/', "\ShawnSandy\Backstory\App\Controllers\StoryController",
     ['only' => ["store", "update", "destroy"]]);
 
+
+    Route::resource('/story/meta', "\ShawnSandy\Backstory\App\Controllers\StoryMetaController",
+    ['only' => ["store", "update", "destroy"]]);
+
+
+    Route::resource('/story/options', "\ShawnSandy\Backstory\App\Controllers\StoryOptionsController",
+    ['only' => ["store", "update", "destroy"]]);
+
     Route::resource('category', "\ShawnSandy\Backstory\App\Controllers\CategoriesController",
     ['only' => ["store", "update", "destroy"]]);
-
-    Route::resource('attachments', "\ShawnSandy\Backstory\App\Controllers\AttachmentsController",
-    ['only' => ["store", "update", "destroy"]]);
-
 
     Route::resource('options', "\ShawnSandy\Backstory\App\Controllers\OptionsController",
     ['only' => ["store", "update", "destroy"]]);
