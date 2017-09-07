@@ -25,4 +25,5 @@ class StoryController extends Controller
     public function destroy() {
 
     }
+
 }
