@@ -6,20 +6,13 @@ use Illuminate\Database\Migrations\Migration;
 
 class Backstories extends Migration
 {
-
-
-
-
-
-
-
 	/**
 	* Run the migrations.
-							     *
-							     * @return void
-							     */
-							    public function up()
-							    {
+    *
+    * @return void
+    */
+    public function up()
+    {
 		Schema::create('stories', function (Blueprint $table) {
 			$table->increments('id');
 			$table->integer('user_id');
@@ -36,7 +29,8 @@ class Backstories extends Migration
 			$table->text('tags')->nullable();
 			$table->text('meta')->nullable();
 			$table->text('options')->nullable();
-			$table->timestamps();
+            $table->timestamps();
+            $table->softDeletes();
 		}
 		);
 
@@ -47,7 +41,8 @@ class Backstories extends Migration
 			$table->string('name');
 			$table->string('description')->nullable();
 			$table->string('meta');
-			$table->timestamps();
+            $table->timestamps();
+            $table->softDeletes();
 
 
 		}
@@ -59,7 +54,8 @@ class Backstories extends Migration
 			$table->string('name');
 			$table->string("description")->nullable();
 			$table->text("options")->nullable();
-			$table->timestamps();
+            $table->timestamps();
+            $table->softDeletes();
 		}
 		);
 
@@ -67,7 +63,7 @@ class Backstories extends Migration
 			$table->integer('story_id');
 			$table->integer('story_category_id');
 			$table->primary(['story_id', 'story_category_id'], 'story_category');
-			$table->timestamps();
+            $table->timestamps();
 		}
 		);
 
@@ -80,7 +76,8 @@ class Backstories extends Migration
 			$table->string("description")->nullable();
 			$table->string("url")->nullable();
 			$table->text("options")->nullable();
-			$table->timestamps();
+            $table->timestamps();
+            $table->softDeletes();
 
 		}
 		);
@@ -89,7 +86,8 @@ class Backstories extends Migration
 			$table->integer('story_id');
 			$table->integer('story_attachment_id');
 			$table->primary(['story_id', 'story_attachment_id'], 'story_attachment');
-			$table->timestamps();
+            $table->timestamps();
+
 		}
 		);
 
