@@ -3,9 +3,14 @@
 namespace ShawnSandy\Backstory\App;
 
 
-class StoryAttachments
+use Illuminate\Database\Eloquent\Model;
+
+class StoryAttachments extends Model
 {
-     public function stories()
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function stories()
     {
         return $this->belongsToMany(Story::class);
     }

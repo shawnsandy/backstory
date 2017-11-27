@@ -1,7 +1,7 @@
 <?php
 namespace ShawnSandy\BackStory\App;
 
-use ShawnSandy\Backstory\App\Story;
+
 use Illuminate\Database\Eloquent\Model;
 
 
