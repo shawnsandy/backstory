@@ -63,7 +63,7 @@
             return html()->textarea('content')->class($class)->placeholder($placeholder);
         }
 
-        public function content($placeholder = 'Lets write the next block buster', $class = ['textarea', 'is-large'])
+        public function content($placeholder = 'Lets write the next block buster', $class = ['textarea', 'content'])
         {
             return html()->textarea('content')->class($class)->placeholder($placeholder);
         }

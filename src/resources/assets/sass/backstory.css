@@ -3,3 +3,8 @@
 
 .backstory .select {
   width: 100%; }
+
+.backstory textarea {
+  overflow: hidden; }
+  .backstory textarea.content {
+    min-height: 400px; }

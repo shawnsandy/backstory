@@ -64,7 +64,7 @@
 </section>
 
 <footer>
-    <p class="text-center">Footer </p>
+    <p class="has-text-centered"> Backstory </p>
 </footer>
 </body>
 
