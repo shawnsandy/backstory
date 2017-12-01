@@ -4,7 +4,6 @@ namespace ShawnSandy\Backstory\App;
 
 use App\User;
 use Illuminate\Database\Eloquent\Model;
-use ShawnSandy\Backstory\App\StoryAttachments;
 
 class Story extends Model
 {
@@ -31,12 +30,12 @@ class Story extends Model
 
     public function attachments()
     {
-        return $this->belongsToMany(StoryAttachments::class);
+        return $this->belongsToMany(StoryAttachment::class);
     }
 
     public function options()
     {
-        return $this->hasMany(StoryOptions::class);
+        return $this->hasMany(StoryOption::class);
     }
 
     /**

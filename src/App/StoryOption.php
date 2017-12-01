@@ -1,5 +1,5 @@
 <?php
-namespace ShawnSandy\BackStory\App;
+namespace ShawnSandy\Backstory\App;
 
 
 use Illuminate\Database\Eloquent\Model;

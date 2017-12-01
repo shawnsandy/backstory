@@ -20,12 +20,14 @@
         "type": "git",
         "url": "git+https://github.com/shawnsandy/backstory.git"
     },
-    "authors": [{
-        "name": "Shawn Sandy",
-        "email": "shawnsandy04@gmail.com",
-        "homepage": "https://github.com/shawnsandy",
-        "role": "Developer"
-    }],
+    "authors": [
+        {
+            "name": "Shawn Sandy",
+            "email": "shawnsandy04@gmail.com",
+            "homepage": "https://github.com/shawnsandy",
+            "role": "Developer"
+        }
+    ],
     "author": "shawn sandy <shawnsandy04@gmail.com>",
     "license": "MIT",
     "bugs": {

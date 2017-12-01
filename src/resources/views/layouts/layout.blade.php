@@ -12,8 +12,8 @@
     <![endif]-->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    <link rel="stylesheet" href="/assets/backstory/backstory.css">
     <style>
         p {
             font-size: 16px;
@@ -41,18 +41,11 @@
 
 <body>
 <div class="container">
-    <div class="row">
-        <div class="col-md-6">
+    <div class="section">
+        <div class="">
             <h1>
                 @yield('page_title')
             </h1>
-
-
-        </div>
-        <div class="col-md-6 text-right">
-            <p class="h1">
-                <a href="/" class="btn btn-link btn-lg"><i class="fa fa-home"></i></a>
-            </p>
         </div>
         <div class="col-md-12">
             @include('backstory::partials.messages')
@@ -60,7 +53,16 @@
     </div>
 </div>
 <hr>
-@yield('content')
+<section class="hero is-fullheight">
+  <div class="hero-body hero">
+    <div class="container">
+      <div class="section">
+      @yield('content')
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
     <p class="text-center">Footer </p>
 </footer>
