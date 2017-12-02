@@ -15,5 +15,5 @@
 @endif
 </div>
 </div>
-@include('backstory::forms.create')
+@include('backstory::forms.update')
 @endsection

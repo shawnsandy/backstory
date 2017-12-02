@@ -12,7 +12,7 @@
      //
 
 
-    Route::resource('/', "\ShawnSandy\Backstory\App\Controllers\StoryController",
+    Route::resource('/create', "\ShawnSandy\Backstory\App\Controllers\StoryController",
     ['only' => ["store", "update", "destroy"]]);
 
 

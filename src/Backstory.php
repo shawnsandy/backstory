@@ -48,7 +48,7 @@
 
         public function checkbox($name, $checked = false, $value = 1)
         {
-            return html()->checkbox($name)->checked($checked)->class(array_merge($this->formClass($class)));
+            return html()->checkbox($name)->checked($checked)->class($this->formClass());
         }
 
 
@@ -60,7 +60,7 @@
 
         public function introduction($placeholder = 'Pitch (introduce) the story', $class = ['textarea'])
         {
-            return html()->textarea('content')->class($class)->placeholder($placeholder);
+            return html()->textarea('introduction')->class($class)->placeholder($placeholder);
         }
 
         public function content($placeholder = 'Lets write the next block buster', $class = ['textarea', 'content'])
@@ -70,17 +70,29 @@
 
         public function featured($value = null)
         {
-            return html()->select($name = 'featured', $options = [ null => '', '1' => 'Yes', '0' => 'No'], $value)
+            return html()->select('featured', $options = [ null => '', '1' => 'Yes', '0' => 'No'], $value)
             ->class('select');
         }
 
         public function type($value = null)
         {
-            return html()->select($name = 'type', $options = [
+            return html()->select('type', $options = [
                  null => '',
                  'post' => 'Post',
                  'article' => 'Article',
                 'podcast' => 'Podcast'
+                ], $value)
+            ->class('select');
+        }
+
+        public function status($value = null)
+        {
+            return html()->select('status', $options = [
+                 null => '',
+                 'DRAFT' => 'DRAFT',
+                 'PUBLISHED' => 'PUBLISHED',
+                 'REVIEW' => 'PENDING REVIEW',
+                'ARCHIVED' => 'ARCHIVED'
                 ], $value)
             ->class('select');
         }
