@@ -46,7 +46,7 @@ class BackstoryServicesProvider extends ServiceProvider
 				            [
 
 				                __DIR__.'/resources/assets/sass' => public_path('assets/backstory'),
-				                __DIR__.'/../node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js' => public_path('assets/backstory/ckeditor.js'),
+				                __DIR__.'/../node_modules/ckeditor' => public_path('assets/backstory/ckeditor/'),
 				            ], 'backstory-assets'
 				        );
 

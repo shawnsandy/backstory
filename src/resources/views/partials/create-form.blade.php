@@ -63,10 +63,10 @@
 </div>
 
 @push('scripts')
-<script src="/assets/backstory/ckeditor.js"></script>
+<script src="/assets/backstory/ckeditor/ckeditor.js"></script>
 <script>
 var ckview = document.getElementById("content");
- ClassicEditor.create(ckview);
+ CKEDITOR.replace(ckview);
 </script>
 
 @endpush
