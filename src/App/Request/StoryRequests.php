@@ -25,12 +25,12 @@ class StoryRequests extends FormRequest
 		return  [
 
 		'title' => 'required|max:199',
-		            'introduction' => 'max:250',
-		            'featured' => 'numeric',
-		            'type' => 'string',
-		            'status' => 'string',
-		            'content' => 'string',
-		            'cover_photo' => 'image',
+        'introduction' => 'max:250',
+        'featured' => 'numeric',
+        'type' => 'string',
+        'status' => 'string',
+        'content' => 'string',
+        'cover_photo' => 'image',
 
 		];
 	}
@@ -59,8 +59,8 @@ class StoryRequests extends FormRequest
 
 		$data['content_plain'] = "some plain old content";
 
-        if($this->upload())
-        $data['cover_photo'] = $this->upload;
+        if($cover_photo = $this->upload())
+        $data['cover_photo'] = $cover_photo;
 
         return $data;
 
@@ -68,7 +68,7 @@ class StoryRequests extends FormRequest
 
 	public function upload()
 	{
-		if($this->hasFile("cover_photo") && $this->file("cover_photo")->is_valid())
+		if($this->hasFile("cover_photo") && $this->file("cover_photo")->isValid())
 		            return $this->file('cover_photo')->store('img');
 
 		return null;

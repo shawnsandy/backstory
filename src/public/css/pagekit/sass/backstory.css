@@ -1,0 +1,7 @@
+.backstory .control {
+    margin-bottom: 40px; }
+
+.backstory textarea {
+    overflow: hidden; }
+    .backstory textarea.content {
+        min-height: 300px; }

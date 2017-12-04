@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
 
@@ -23,6 +24,7 @@
         .form-control {
             border-radius: 0;
         }
+
         .hide {
             display: none;
         }
@@ -34,45 +36,55 @@
         footer {
             padding: 50px 0;
         }
+
     </style>
-    @stack('styles')
-    @stack('inline-styles')
+    @stack('styles') @stack('inline-styles')
 </head>
 
 <body>
-<div class="container">
-    <div class="section">
-        <div class="">
-            <h1>
-                @yield('page_title')
-            </h1>
-        </div>
-        <div class="col-md-12">
-            @include('backstory::partials.messages')
+    <div class="container is-fluid">
+        <div class="section">
+            <div class="">
+                <h1 class="title is-1">
+                    BackStory
+                </h1>
+            </div>
+            <div class="col-md-12">
+                @include('backstory::partials.messages')
+            </div>
         </div>
     </div>
-</div>
-<hr>
-<section class="hero is-fullheight">
-  <div class="hero-body hero">
-    <div class="container">
-      <div class="section">
-      @yield('content')
-      </div>
-    </div>
-  </div>
-</section>
+    <hr>
+    <section class="section">
 
-<footer>
-    <p class="has-text-centered"> Backstory </p>
-</footer>
+        <div class="container is-fluid">
+            <div class="columns">
+                <div class="column is-one-quarter">
+                    <h4 class="subtitle is-4">Recent Stories</h4>
+                </div>
+                <div class="column">
+                <h3 class="subtitle is-3">Create / Edit Stories</h3>
+                    @yield('content')
+                </div>
+                <div class="column is-one-quarter">
+<h4 class="subtitle is-4">Categories</h4>
+                    @include('backstory::forms.categories')
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p class="has-text-centered"> Backstory </p>
+    </footer>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-@stack('scripts')
-@stack('inline_scripts')
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+@stack('scripts') @stack('inline_scripts')
+
 </html>

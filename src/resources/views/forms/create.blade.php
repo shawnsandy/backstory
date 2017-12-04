@@ -1,8 +1,8 @@
-<div class="section">
-{!! html()->form('POST', "/story/create")->open()  !!}
+<div class="">
+{!! Backstory::newForm() !!}
 
 @include("backstory::partials.create-form")
 
-<button class="button is-link is-large" type="submit">Save Story</button>
-{!! html()->form()->close()  !!}
+<button class="button is-link is-medium" type="submit">Save Story</button>
+{!! backstory()->formClose();  !!}
 </div>

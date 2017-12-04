@@ -9,6 +9,11 @@ use Illuminate\Database\Eloquent\Model;
 class StoryCategory extends Model
 {
 
+    protected $fillable = [
+        "name",
+        "description"
+    ];
+
     public function stories()
     {
 

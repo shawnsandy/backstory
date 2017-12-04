@@ -15,9 +15,18 @@
     </div>
 
     <div class="field">
+        {{ Backstory::label('Add a category', 'title')->class('label') }}
+        <div class="control">
+            <div class="select is-fullwidth">
+                {{ Backstory::category() }}
+            </div>
+        </div>
+    </div>
+
+    <div class="field">
         {{ Backstory::label('Whats you like this story featured', 'title')->class('label') }}
         <div class="control">
-            <div class="select">
+            <div class="select is-fullwidth">
                 {{ Backstory::featured() }}
             </div>
         </div>
@@ -26,7 +35,7 @@
     <div class="field">
         {{ Backstory::label('What type of story are you writing', 'title')->class('label') }}
         <div class="control">
-            <div class="select">
+            <div class="select is-fullwidth">
                 {{ Backstory::type() }}
             </div>
         </div>
@@ -35,11 +44,13 @@
     <div class="field">
         {{ Backstory::label('Post status', 'title')->class('label') }}
         <div class="control">
-            <div class="select">
+            <div class="select is-fullwidth">
                 {{ Backstory::status() }}
             </div>
         </div>
     </div>
+
+    @include('backstory::partials.file-uploads', ['cover_photo' => isset($story['cover_photo']) ? $story['cover_photo'] : null])
 
     <div class="field">
         {{ Backstory::label('Add the content of your story here', 'content') }}
@@ -47,20 +58,15 @@
             {{ Backstory::content() }}
         </div>
     </div>
-    <div class="control">
-        <div class="file">
-            <label class="file-label">
-                <input class="file-input" type="file" name="cover_photo">
-                <span class="file-cta">
-                    <span class="file-icon">
-                        <i class="fa fa-upload"></i>
-                    </span>
-                    <span class="file-label">
-                        Upload a Cover Image / Photo
-                    </span>
-                </span>
-            </label>
-        </div>
 
-    </div>
+
 </div>
+
+@push('scripts')
+<script src="/assets/backstory/ckeditor.js"></script>
+<script>
+var ckview = document.getElementById("content");
+ ClassicEditor.create(ckview);
+</script>
+
+@endpush

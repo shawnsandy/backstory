@@ -1,10 +1,14 @@
 .backstory {
     .control {
         margin-bottom: 40px;
-    }
 
-    .select {
-        width: 100%;
+        input, select, textarea {
+            border-radius: 1px;
+        }
+
+        .ck-editor__editable {
+            min-height: 300px;
+        }
 
     }
 

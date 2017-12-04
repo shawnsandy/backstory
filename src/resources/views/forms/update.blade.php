@@ -1,8 +1,9 @@
-<div class="section">
-{!! html()->modelForm($story,'PUT', "/story/create/{$story->id}")->open()  !!}
+<div class="">
+
+{{ backstory()->newForm(1) }}
 
 @include("backstory::partials.create-form")
 
 <button class="button is-link is-medium" type="submit">Update Story</button>
-{!! html()->closeModelForm()  !!}
+{!! backstory()->formClose(true);  !!}
 </div>

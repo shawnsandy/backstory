@@ -43,8 +43,8 @@ class Story extends Model
      * Find category by id
      *
      *
-     * @param [type] $query
-     * @param [type] $tag
+     * @param mixed $query
+     * @param string $tag
      * <code> Story::getTag('red')->get();</code>
      * @return void
      */
@@ -59,8 +59,8 @@ class Story extends Model
     /**
      * Find category by Id
      *
-     * @param [mixed] $query
-     * @param [init] $id
+     * @param mixed $query
+     * @param string $id
      * <code>Story::categoryId(1)->get();</code>
      *
      * @return void
@@ -81,8 +81,8 @@ class Story extends Model
     /**
      * Find category by name
      *
-     * @param [mixed] $query
-     * @param [string] $name
+     * @param mixed $query
+     * @param string $name
      * <code> Story::categoryName('general')->get();</code>
      *
      * @return void

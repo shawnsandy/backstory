@@ -1,8 +1,9 @@
 .backstory .control {
   margin-bottom: 40px; }
-
-.backstory .select {
-  width: 100%; }
+  .backstory .control input, .backstory .control select, .backstory .control textarea {
+    border-radius: 1px; }
+  .backstory .control .ck-editor__editable {
+    min-height: 300px; }
 
 .backstory textarea {
   overflow: hidden; }

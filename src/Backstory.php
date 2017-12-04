@@ -8,6 +8,9 @@
 
     namespace ShawnSandy\Backstory;
 
+    use ShawnSandy\Backstory\App\StoryCategory;
+    use ShawnSandy\Backstory\App\Story;
+
 
     class Backstory
     {
@@ -68,33 +71,85 @@
             return html()->textarea('content')->class($class)->placeholder($placeholder);
         }
 
+        /**
+         * Marks a story as featured
+         *
+         * @param mixed $value
+         * @return void
+         */
         public function featured($value = null)
         {
             return html()->select('featured', $options = [ null => '', '1' => 'Yes', '0' => 'No'], $value)
-            ->class('select');
+            ->class('select is-fullwidth');
         }
 
         public function type($value = null)
         {
-            return html()->select('type', $options = [
-                 null => '',
-                 'post' => 'Post',
-                 'article' => 'Article',
-                'podcast' => 'Podcast'
-                ], $value)
-            ->class('select');
+            return html()->select('type', config("backstory.story_types"), $value)
+            ->class('select is-fullwidth');
         }
 
+        /**
+         * Story status select field set the status of your post
+         *
+         * @param string $value
+         * @return void
+         */
         public function status($value = null)
         {
-            return html()->select('status', $options = [
-                 null => '',
-                 'DRAFT' => 'DRAFT',
-                 'PUBLISHED' => 'PUBLISHED',
-                 'REVIEW' => 'PENDING REVIEW',
-                'ARCHIVED' => 'ARCHIVED'
-                ], $value)
-            ->class('select');
+            return html()->select('status', config("backstory.story_status"), $value)
+            ->class('select is-fullwidth');
         }
+
+
+        /**
+         * Creates the form open tag for a new story
+         *
+         * @param array $model
+         * @return void
+         */
+        public function newForm($story_id = null)
+        {
+            if(!is_null($story_id)):
+                $model = Story::with('author')->where("id", $story_id)->first();
+            return html()->modelForm($model, 'PUT', "/story/create/{$model->id}")
+            ->acceptsFiles()->open();
+            endif;
+
+            return html()->form('POST', "/story/create")->acceptsFiles()->open();
+
+        }
+
+        /**
+         * Create the Form close from tag for story
+         *
+         * @param boolean $close_model
+         * @return void
+         */
+        public function formClose($close_model = false)
+        {
+            if($close_model)
+            return html()->closeModelForm();
+
+            return html()->form()->close();
+
+        }
+
+         /**
+         * Story categories select field
+         *
+         * @param string $value
+         * @return void
+         */
+        public function category($categories = [], $value = null)
+        {
+            if(empty($categories))
+            $categories = StoryCategory::pluck('name', 'id');
+
+            return html()->select('status', $categories, $value)
+            ->class('select is-fullwidth');
+        }
+
+
 
     }
