@@ -111,13 +111,10 @@
         public function newForm($model = null)
         {
             if(!is_null($model)):
-                //$model = Story::with('author')->where("id", $model)->first();
-            return html()->modelForm($model, 'PUT', "/story/create/{$model->id}")
-            ->acceptsFiles()->open();
+            return html()->modelForm($model, 'PUT', "/story/create/{$model->id}")->acceptsFiles()->open();
             endif;
 
-            return html()->form('POST', "/story/create")->acceptsFiles()->open();
-
+            return html()->form('POST',  "/story/create")->acceptsFiles()->open();
         }
 
         /**
@@ -153,11 +150,8 @@
 
         public function latestStories($limit =20)
         {
-
             return Story::latest()->take($limit)->get();
-
         }
-
 
 
     }

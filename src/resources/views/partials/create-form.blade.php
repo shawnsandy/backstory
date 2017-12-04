@@ -55,6 +55,9 @@
     <div class="field">
         {{ Backstory::label('Add the content of your story here', 'content') }}
         <div class="control">
+         {{--  <p>
+            <button class="insert button">Insert</button>
+        </p>  --}}
             {{ Backstory::content() }}
         </div>
     </div>
@@ -62,9 +65,27 @@
 
 </div>
 
+
 @push('scripts')
 <script src="/assets/backstory/ckeditor/ckeditor.js"></script>
 <script>
- CKEDITOR.replace(document.getElementById('content'));
+    var storyEditor = document.getElementById('content');
+    CKEDITOR.replace(storyEditor, {
+	height : 400,
+	toolbarCanCollapse : true,
+    // Define the toolbar groups as it is a more accessible solution.
+			toolbarGroups: [
+				{"name":"basicstyles","groups":["basicstyles"]},
+				{"name":"links","groups":["links"]},
+				{"name":"paragraph","groups":["list","blocks"]},
+				{"name":"document","groups":["mode"]},
+				{"name":"insert","groups":["insert"]},
+				{"name":"styles","groups":["styles"]},
+				{"name":"about","groups":["about"]}
+			]
+    });
+
+
+
 </script>
 @endpush
