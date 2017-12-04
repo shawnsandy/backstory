@@ -108,10 +108,10 @@
          * @param array $model
          * @return void
          */
-        public function newForm($story_id = null)
+        public function newForm($model = null)
         {
-            if(!is_null($story_id)):
-                $model = Story::with('author')->where("id", $story_id)->first();
+            if(!is_null($model)):
+                //$model = Story::with('author')->where("id", $model)->first();
             return html()->modelForm($model, 'PUT', "/story/create/{$model->id}")
             ->acceptsFiles()->open();
             endif;
@@ -148,6 +148,14 @@
 
             return html()->select('status', $categories, $value)
             ->class('select is-fullwidth');
+        }
+
+
+        public function latestStories($limit =20)
+        {
+
+            return Story::latest()->take($limit)->get();
+
         }
 
 

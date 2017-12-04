@@ -59,16 +59,21 @@
 
         <div class="container is-fluid">
             <div class="columns">
-                <div class="column is-one-quarter">
-                    <h4 class="subtitle is-4">Recent Stories</h4>
-                </div>
+
                 <div class="column">
                 <h3 class="subtitle is-3">Create / Edit Stories</h3>
                     @yield('content')
                 </div>
                 <div class="column is-one-quarter">
-<h4 class="subtitle is-4">Categories</h4>
-                    @include('backstory::forms.categories')
+                <div class="box">
+                 <h4 class="subtitle is-4">Latest Stories</h4>
+                <div class="content">
+                    @foreach(Backstory::latestStories() as $item)
+                        <p>
+                        <a href="" class="is-dark">{{ $item->title }}</a></p>
+                    @endforeach
+                </div>
+                </div>
 
                 </div>
             </div>
@@ -81,10 +86,10 @@
     </footer>
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/umbrellajs@2.9.0/umbrella.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
-@stack('scripts') @stack('inline_scripts')
+
+@stack('scripts')
+@stack('inline_scripts')
 
 </html>

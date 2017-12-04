@@ -1,6 +1,6 @@
 <div class="">
 
-{{ backstory()->newForm(1) }}
+{{ backstory()->newForm($model) }}
 
 @include("backstory::partials.create-form")
 

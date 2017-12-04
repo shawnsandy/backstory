@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    @include('backstory::partials.file-uploads', ['cover_photo' => isset($story['cover_photo']) ? $story['cover_photo'] : null])
+    @include('backstory::partials.file-uploads', ['cover_photo' => isset($model->cover_photo) ? $model->cover_photo : null])
 
     <div class="field">
         {{ Backstory::label('Add the content of your story here', 'content') }}
@@ -65,8 +65,6 @@
 @push('scripts')
 <script src="/assets/backstory/ckeditor/ckeditor.js"></script>
 <script>
-var ckview = document.getElementById("content");
- CKEDITOR.replace(ckview);
+ CKEDITOR.replace(document.getElementById('content'));
 </script>
-
 @endpush
