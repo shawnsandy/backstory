@@ -20,3 +20,15 @@ CKEDITOR.replace(storyEditor, {
       //console.log(file)
     }
   };
+
+  var choicesConf = {
+    addItems: true,
+    placeholder: true,
+    removeItems: true,
+    placeholderValue: "Select a category for your story"
+  }
+
+  var categoryChoices = new Choices("#category", choicesConf);
+  var typeChoices = new Choices("#type", choicesConf);
+  var featuredChoices = new Choices("#featured", choicesConf);
+  var statusChoices = new Choices("#status", choicesConf);

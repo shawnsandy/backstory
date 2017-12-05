@@ -26,7 +26,7 @@
     <div class="field">
         {{ Backstory::label('Featured', 'featured')->class('label') }}
         <div class="control">
-            <div class="select is-fullwidth">
+            <div class="is-fullwidth">
                 {{ Backstory::featured() }}
             </div>
         </div>
@@ -35,7 +35,7 @@
     <div class="field">
         {{ Backstory::label('What type of story are you writing', 'type')->class('label') }}
         <div class="control">
-            <div class="select is-fullwidth">
+            <div class="is-fullwidth">
                 {{ Backstory::type() }}
             </div>
         </div>
@@ -44,7 +44,7 @@
     <div class="field">
         {{ Backstory::label('Post status', 'status')->class('label') }}
         <div class="control">
-            <div class="select is-fullwidth">
+            <div class="is-fullwidth">
                 {{ Backstory::status() }}
             </div>
         </div>
@@ -74,11 +74,6 @@
 <script src="/assets/backstory/ckeditor/ckeditor.js"></script>
 <script src="/assets/backstory/choices/choices.min.js"></script>
 <script>
-var choices = new Choices('#category', {
-    addItems: true,
-    placeholder: true,
-    removeItems: true,
-    placeholderValue: "Select a category for your story"
-});
+
 </script>
 @endpush

@@ -148,6 +148,12 @@
         }
 
 
+        /**
+         * Get the latest stories
+         *
+         * @param integer $limit
+         * @return void
+         */
         public function latestStories($limit =20)
         {
             return Story::latest()->take($limit)->get();
