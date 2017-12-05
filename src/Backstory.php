@@ -143,11 +143,17 @@
             if(empty($categories))
             $categories = StoryCategory::pluck('name', 'id');
 
-            return html()->select('category', $categories, $value)
-            ->class('select is-fullwidth');
+            return html()->multiselect('category', $categories, $value)
+            ->class('is-fullwidth');
         }
 
 
+        /**
+         * Get the latest stories
+         *
+         * @param integer $limit
+         * @return void
+         */
         public function latestStories($limit =20)
         {
             return Story::latest()->take($limit)->get();

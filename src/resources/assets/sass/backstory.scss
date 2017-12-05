@@ -1,33 +1,34 @@
 .backstory {
     .control {
         margin-bottom: 40px;
-
-        input, select, textarea {
+        input,
+        select,
+        textarea {
             border-radius: 1px;
         }
-
         .ck-editor__editable {
             min-height: 300px;
         }
-
-
     }
-
     .label {
         font-weight: normal;
         text-transform: uppercase;
-
     }
-
+    .button.is-rounded {
+        border-radius: 30%
+    }
     textarea {
-
         overflow: hidden;
-
         &.content {
             min-height: 300px;
         }
+    }
+    .file-name {
+        color: lightgray;
+    }
+    .choices__list--multiple .choices__item {
+        background-color: gray;
+        border-color: gray;
 
     }
-
-
 }

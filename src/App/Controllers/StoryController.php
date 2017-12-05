@@ -26,6 +26,8 @@ class StoryController extends Controller
 
     public function update(StoryRequests $request, $id) {
 
+        dd($request->all());
+
         if($request->update($id))
         return back()->with('success', "Your story has been updated");
 
