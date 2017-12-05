@@ -49,7 +49,7 @@
         },
         "laravel": {
             "providers": [
-                "ShawnSandy\\Backstory\\:BackstoryServicesProvider"
+                "ShawnSandy\\Backstory\\BackstoryServicesProvider"
             ],
             "aliases": {
                 "Backstory": "ShawnSandy\\Backstory\\:BackstoryFacade"

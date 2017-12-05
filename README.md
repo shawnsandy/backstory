@@ -1,8 +1,6 @@
 # Backstory
 
-Create and edit, post, blogs, podcast or news, a smart way to      tell your story.
-
-
+Tell Your Story. Backstory is a package for creating and editing, content in you laravel application.
 
 ## Install
 
@@ -16,12 +14,13 @@ Create and edit, post, blogs, podcast or news, a smart way to      tell your sto
         }
     ],
 ```
+
 - Run the composer require to install the package
 ``` bash
-composer require shawnsandy/img-fly
+composer require shawnsandy/backstory
 ```
 
-### In Laravel 5.5 and higher the package automatically installs itself. If you are running Laravel  5.4 or earlier please follow the instructions below.
+### In Laravel 5.5 and higher the package automatically installs itself. If you are running Laravel 5.4 or earlier please follow the instructions below.
 
 * Add the provider to your `config\app.php` providers.
 
@@ -29,7 +28,7 @@ composer require shawnsandy/img-fly
 ShawnSandy\Backstory\BackstoryServiceProvider::class,
 ```
 
-* Add the facade to your `config\app.php` alias.
+* Add the facade to your `config/..app.php` alias.
 
 ```
 "Backstory" => ShawnSandy\Backstory\BackstoryFacade::class,
@@ -37,7 +36,7 @@ ShawnSandy\Backstory\BackstoryServiceProvider::class,
 
 ### Routes
 
-* Add the route to your `routes\web.php`
+* Add the route(s) to your `routes\web.php`
 
 ``` php
 Backstory::routes();
@@ -62,8 +61,8 @@ If you discover any security related issues, please email shawnsandy04@gmail.com
 
 ## Credits
 
-- [Shawn Sandy][link-author]
-- [All Contributors][link-contributors]
+- [Shawn Sandy](http://shawnsandy.design)
+
 
 ## License
 
