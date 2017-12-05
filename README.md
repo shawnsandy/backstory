@@ -1,6 +1,6 @@
 # Backstory
 
-Tell Your Story. Create and edit, content in you laravel application.
+Tell Your Story. Backstory is a package for creating and editing, content in you laravel application.
 
 ## Install
 
