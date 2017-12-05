@@ -17,3 +17,7 @@
 </div>
 @include('backstory::forms.update')
 @endsection
+
+@section("sidebar")
+@include('backstory::partials.latest-stories')
+@endsection

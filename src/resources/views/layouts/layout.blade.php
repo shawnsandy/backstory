@@ -46,8 +46,9 @@
         <div class="section">
             <div class="">
                 <h1 class="title is-1">
-                    BackStory
+                   <a href="/stories">BackStory</a>
                 </h1>
+                <p class="subtitle is-4">A Simple way to create content in laravel (post stories, articles, podcast)</p>
             </div>
             <div class="col-md-12">
                 @include('backstory::partials.messages')
@@ -61,17 +62,17 @@
             <div class="columns">
 
                 <div class="column">
-                <h3 class="subtitle is-3">Create / Edit Stories</h3>
+                <div class="container is-fluid">
                     @yield('content')
                 </div>
+                </div>
+
                 <div class="column is-one-quarter">
-                <div class="box">
 
-                @include('backstory::partials.latest-stories')
-
-                </div>
+                        @yield('sidebar')
 
                 </div>
+
             </div>
         </div>
 
@@ -85,7 +86,6 @@
 <script src="https://cdn.jsdelivr.net/npm/umbrellajs@2.9.0/umbrella.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 
-@stack('scripts')
-@stack('inline_scripts')
+@stack('scripts') @stack('inline_scripts')
 
 </html>

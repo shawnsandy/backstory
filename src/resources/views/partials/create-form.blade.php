@@ -1,21 +1,21 @@
 <div class="backstory">
 
     <div class="field">
-        {{ Backstory::label('Whats the title of your Story', 'title') }}
+        {{ Backstory::label('Title', 'title') }}
         <div class="control">
             {{ Backstory::title() }}
         </div>
     </div>
 
     <div class="field">
-        {{ Backstory::label('Write a simple introduction to your story', 'title')->class('checkbox') }}
+        {{ Backstory::label('Introduction', 'introduction')->class('checkbox') }}
         <div class="control">
             {{ Backstory::introduction() }}
         </div>
     </div>
 
     <div class="field">
-        {{ Backstory::label('Add a category', 'title')->class('label') }}
+        {{ Backstory::label('Categories', 'category')->class('label') }}
         <div class="control">
             <div class="select is-fullwidth">
                 {{ Backstory::category() }}
@@ -24,7 +24,7 @@
     </div>
 
     <div class="field">
-        {{ Backstory::label('Whats you like this story featured', 'title')->class('label') }}
+        {{ Backstory::label('Featured', 'featured')->class('label') }}
         <div class="control">
             <div class="select is-fullwidth">
                 {{ Backstory::featured() }}
@@ -33,7 +33,7 @@
     </div>
 
     <div class="field">
-        {{ Backstory::label('What type of story are you writing', 'title')->class('label') }}
+        {{ Backstory::label('What type of story are you writing', 'type')->class('label') }}
         <div class="control">
             <div class="select is-fullwidth">
                 {{ Backstory::type() }}
@@ -42,7 +42,7 @@
     </div>
 
     <div class="field">
-        {{ Backstory::label('Post status', 'title')->class('label') }}
+        {{ Backstory::label('Post status', 'status')->class('label') }}
         <div class="control">
             <div class="select is-fullwidth">
                 {{ Backstory::status() }}
@@ -80,8 +80,7 @@
 				{"name":"paragraph","groups":["list","blocks"]},
 				{"name":"document","groups":["mode"]},
 				{"name":"insert","groups":["insert"]},
-				{"name":"styles","groups":["styles"]},
-				{"name":"about","groups":["about"]}
+				{"name":"styles","groups":["styles"]}
 			]
     });
 

@@ -14,6 +14,11 @@
 
 @endif
 </div>
+
 </div>
 @include('backstory::forms.create')
+@endsection
+
+@section("sidebar")
+@include('backstory::partials.latest-stories')
 @endsection

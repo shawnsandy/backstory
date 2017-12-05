@@ -79,14 +79,14 @@
          */
         public function featured($value = null)
         {
-            return html()->select('featured', $options = [ null => '', '1' => 'Yes', '0' => 'No'], $value)
-            ->class('select is-fullwidth');
+            return html()->select('featured', $options = ['1' => 'Yes', '0' => 'No'], $value)
+            ->class('select is-fullwidth')->placeholder('Would you like this story featured');
         }
 
         public function type($value = null)
         {
             return html()->select('type', config("backstory.story_types"), $value)
-            ->class('select is-fullwidth');
+            ->class('select is-fullwidth')->placeholder('Select a story type');
         }
 
         /**
@@ -98,7 +98,7 @@
         public function status($value = null)
         {
             return html()->select('status', config("backstory.story_status"), $value)
-            ->class('select is-fullwidth');
+            ->class('select is-fullwidth')->placeholder('Set the post status');
         }
 
 
@@ -143,7 +143,7 @@
             if(empty($categories))
             $categories = StoryCategory::pluck('name', 'id');
 
-            return html()->select('status', $categories, $value)
+            return html()->select('category', $categories, $value)
             ->class('select is-fullwidth');
         }
 
