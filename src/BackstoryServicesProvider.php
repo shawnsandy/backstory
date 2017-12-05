@@ -46,6 +46,7 @@ $this->publishes(
     [
 
         __DIR__.'/resources/assets/sass' => public_path('assets/backstory'),
+        __DIR__.'/resources/assets/js' => public_path('assets/backstory'),
         __DIR__.'/../node_modules/ckeditor' => public_path('assets/backstory/ckeditor/'),
         __DIR__.'/../node_modules/choices.js/assets/scripts/dist' => public_path('assets/backstory/choices/'),
         __DIR__.'/../node_modules/choices.js/assets/styles/css' => public_path('assets/backstory/choices/'),

@@ -48,7 +48,7 @@
                 <h1 class="title is-1">
                    <a href="/stories">BackStory</a>
                 </h1>
-                <p class="subtitle is-4">A Simple way to create content in laravel (post stories, articles, podcast)</p>
+                <p class="subtitle is-4">A Simple way to create content in laravel (post stories, articles, podcast) <a href="{{ config("backstory.stories.create_url") }}" class="button">Create a new Story</a></p>
             </div>
             <div class="col-md-12">
                 @include('backstory::partials.messages')
@@ -68,9 +68,7 @@
                 </div>
 
                 <div class="column is-one-quarter">
-
                         @yield('sidebar')
-
                 </div>
 
             </div>
@@ -85,7 +83,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/umbrellajs@2.9.0/umbrella.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
-
 @stack('scripts') @stack('inline_scripts')
+<script src="/assets/backstory/app.js"></script>
 
 </html>

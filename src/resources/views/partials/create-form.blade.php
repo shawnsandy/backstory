@@ -17,7 +17,7 @@
     <div class="field">
         {{ Backstory::label('Categories', 'category')->class('label') }}
         <div class="control">
-            <div class="select is-fullwidth">
+            <div class="is-fullwidth">
                 {{ Backstory::category() }}
             </div>
         </div>
@@ -65,26 +65,20 @@
 
 </div>
 
+@push("styles")
+{{--  <link rel="stylesheet" href="/assets/backstory/choices/base.min.css">  --}}
+<link rel="stylesheet" href="/assets/backstory/choices/choices.min.css">
+@endpush
 
 @push('scripts')
 <script src="/assets/backstory/ckeditor/ckeditor.js"></script>
+<script src="/assets/backstory/choices/choices.min.js"></script>
 <script>
-    var storyEditor = document.getElementById('content');
-    CKEDITOR.replace(storyEditor, {
-	height : 400,
-	toolbarCanCollapse : true,
-    // Define the toolbar groups as it is a more accessible solution.
-			toolbarGroups: [
-				{"name":"basicstyles","groups":["basicstyles"]},
-				{"name":"links","groups":["links"]},
-				{"name":"paragraph","groups":["list","blocks"]},
-				{"name":"document","groups":["mode"]},
-				{"name":"insert","groups":["insert"]},
-				{"name":"styles","groups":["styles"]}
-			]
-    });
-
-
-
+var choices = new Choices('#category', {
+    addItems: true,
+    placeholder: true,
+    removeItems: true,
+    placeholderValue: "Select a category for your story"
+});
 </script>
 @endpush

@@ -12,7 +12,7 @@
         </span>
       </span>
       <span id="file-name" class="file-name is-primary">
-      {{ $cover_photo or ""}}
+      {{ $cover_photo or "Upload a cover image / photo for you story"}}
       </span>
     </label>
   </div>
@@ -20,14 +20,5 @@
 
 </div>
 @push('scripts')
-  <script>
-  var file = document.getElementById("cover-photo");
-    file.onchange = function(){
-    if(file.files.length > 0)
-    {
-      document.getElementById('file-name').innerHTML = file.files[0].name;
-      //console.log(file)
-    }
-};
-</script>
+
 @endpush

@@ -1,6 +1,8 @@
 .backstory .control {
   margin-bottom: 40px; }
-  .backstory .control input, .backstory .control select, .backstory .control textarea {
+  .backstory .control input,
+  .backstory .control select,
+  .backstory .control textarea {
     border-radius: 1px; }
   .backstory .control .ck-editor__editable {
     min-height: 300px; }
@@ -9,7 +11,17 @@
   font-weight: normal;
   text-transform: uppercase; }
 
+.backstory .button.is-rounded {
+  border-radius: 30%; }
+
 .backstory textarea {
   overflow: hidden; }
   .backstory textarea.content {
     min-height: 300px; }
+
+.backstory .file-name {
+  color: lightgray; }
+
+.backstory .choices__list--multiple .choices__item {
+  background-color: gray;
+  border-color: gray; }

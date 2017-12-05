@@ -143,8 +143,8 @@
             if(empty($categories))
             $categories = StoryCategory::pluck('name', 'id');
 
-            return html()->select('category', $categories, $value)
-            ->class('select is-fullwidth');
+            return html()->multiselect('category', $categories, $value)
+            ->class('is-fullwidth');
         }
 
 
