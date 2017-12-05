@@ -62,7 +62,7 @@ If you discover any security related issues, please email shawnsandy04@gmail.com
 ## Credits
 
 - [Shawn Sandy](http://shawnsandy.design)
-- [All Contributors][link-contributors]
+
 
 ## License
 
