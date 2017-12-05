@@ -1,0 +1,15 @@
+.backstory .control {
+  margin-bottom: 40px; }
+  .backstory .control input, .backstory .control select, .backstory .control textarea {
+    border-radius: 1px; }
+  .backstory .control .ck-editor__editable {
+    min-height: 300px; }
+
+.backstory .label {
+  font-weight: normal;
+  text-transform: uppercase; }
+
+.backstory textarea {
+  overflow: hidden; }
+  .backstory textarea.content {
+    min-height: 300px; }

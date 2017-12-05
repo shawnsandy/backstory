@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
 
@@ -12,8 +13,8 @@
     <![endif]-->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    <link rel="stylesheet" href="/assets/backstory/backstory.css">
     <style>
         p {
             font-size: 16px;
@@ -23,6 +24,7 @@
         .form-control {
             border-radius: 0;
         }
+
         .hide {
             display: none;
         }
@@ -34,43 +36,56 @@
         footer {
             padding: 50px 0;
         }
+
     </style>
-    @stack('styles')
-    @stack('inline-styles')
+    @stack('styles') @stack('inline-styles')
 </head>
 
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <h1>
-                @yield('page_title')
-            </h1>
-
-
-        </div>
-        <div class="col-md-6 text-right">
-            <p class="h1">
-                <a href="/" class="btn btn-link btn-lg"><i class="fa fa-home"></i></a>
-            </p>
-        </div>
-        <div class="col-md-12">
-            @include('backstory::partials.messages')
+    <div class="container is-fluid">
+        <div class="section">
+            <div class="">
+                <h1 class="title is-1">
+                   <a href="/stories">BackStory</a>
+                </h1>
+                <p class="subtitle is-4">A Simple way to create content in laravel (post stories, articles, podcast)</p>
+            </div>
+            <div class="col-md-12">
+                @include('backstory::partials.messages')
+            </div>
         </div>
     </div>
-</div>
-<hr>
-@yield('content')
-<footer>
-    <p class="text-center">Footer </p>
-</footer>
+    <hr>
+    <section class="section">
+
+        <div class="container is-fluid">
+            <div class="columns">
+
+                <div class="column">
+                <div class="container is-fluid">
+                    @yield('content')
+                </div>
+                </div>
+
+                <div class="column is-one-quarter">
+
+                        @yield('sidebar')
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p class="has-text-centered"> Backstory </p>
+    </footer>
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/umbrellajs@2.9.0/umbrella.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-@stack('scripts')
-@stack('inline_scripts')
+
+@stack('scripts') @stack('inline_scripts')
+
 </html>

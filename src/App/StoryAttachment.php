@@ -2,23 +2,17 @@
 
 namespace ShawnSandy\Backstory\App;
 
-use ShawnSandy\Backstory\App ;
-use ShawnSandy\Backstory\App\Story;
+
 use Illuminate\Database\Eloquent\Model;
 
-class StoryCategory extends Model
+class StoryAttachment extends Model
 {
-
-    protected $fillable = [
-        "name",
-        "description"
-    ];
-
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function stories()
     {
-
         return $this->belongsToMany(Story::class);
-
     }
 
 }

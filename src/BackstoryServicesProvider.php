@@ -4,6 +4,7 @@ namespace ShawnSandy\Backstory;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Spatie\Html\HtmlServiceProvider;
 
 
 
@@ -43,8 +44,9 @@ class BackstoryServicesProvider extends ServiceProvider
 				         */
 				        $this->publishes(
 				            [
-				                __DIR__.'/resources/assets/js/' => public_path('assets/backstory/js/'),
-				                __DIR__.'/public/assets/' => public_path('assets/')
+
+				                __DIR__.'/resources/assets/sass' => public_path('assets/backstory'),
+				                __DIR__.'/../node_modules/ckeditor' => public_path('assets/backstory/ckeditor/'),
 				            ], 'backstory-assets'
 				        );
 
@@ -56,7 +58,7 @@ class BackstoryServicesProvider extends ServiceProvider
 				         */
 				        $this->publishes(
 				            [
-				                __DIR__.'/resources/assets/' => resource_path('assets/backstory/'),
+				                __DIR__.'/resources/assets/' => resource_path('assets/backstory'),
 				            ], 'backstory-resources'
 				        );
 
@@ -138,7 +140,7 @@ class BackstoryServicesProvider extends ServiceProvider
 				             */
 
 		// 		$this->app->register(\Collective\Html\HtmlServiceProvider::class);
-
+        $this->app->register(HtmlServiceProvider::class);
 
 
 
@@ -149,6 +151,8 @@ class BackstoryServicesProvider extends ServiceProvider
 				             */
 
 		if ($this->app->environment() !== "production") {
+
+
 
 
 		}

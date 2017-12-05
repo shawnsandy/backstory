@@ -1,0 +1,33 @@
+.backstory {
+    .control {
+        margin-bottom: 40px;
+
+        input, select, textarea {
+            border-radius: 1px;
+        }
+
+        .ck-editor__editable {
+            min-height: 300px;
+        }
+
+
+    }
+
+    .label {
+        font-weight: normal;
+        text-transform: uppercase;
+
+    }
+
+    textarea {
+
+        overflow: hidden;
+
+        &.content {
+            min-height: 300px;
+        }
+
+    }
+
+
+}

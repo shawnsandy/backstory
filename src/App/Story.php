@@ -2,8 +2,8 @@
 
 namespace ShawnSandy\Backstory\App;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
-use ShawnSandy\Backstory\App\StoryAttachments;
 
 class Story extends Model
 {
@@ -11,6 +11,7 @@ class Story extends Model
     protected $fillable = [
         'title',
         'content',
+        'content_plain',
         'introduction',
         'cover_photo',
         'status',
@@ -30,20 +31,20 @@ class Story extends Model
 
     public function attachments()
     {
-        return $this->belongsToMany(StoryAttachments::class);
+        return $this->belongsToMany(StoryAttachment::class);
     }
 
     public function options()
     {
-        return $this->hasMany(StoryOptions::class);
+        return $this->hasMany(StoryOption::class);
     }
 
     /**
      * Find category by id
      *
      *
-     * @param [type] $query
-     * @param [type] $tag
+     * @param mixed $query
+     * @param string $tag
      * <code> Story::getTag('red')->get();</code>
      * @return void
      */
@@ -58,8 +59,8 @@ class Story extends Model
     /**
      * Find category by Id
      *
-     * @param [mixed] $query
-     * @param [init] $id
+     * @param mixed $query
+     * @param string $id
      * <code>Story::categoryId(1)->get();</code>
      *
      * @return void
@@ -80,8 +81,8 @@ class Story extends Model
     /**
      * Find category by name
      *
-     * @param [mixed] $query
-     * @param [string] $name
+     * @param mixed $query
+     * @param string $name
      * <code> Story::categoryName('general')->get();</code>
      *
      * @return void
