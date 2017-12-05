@@ -1,46 +1,47 @@
-# backstory
+# Backstory
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads][ico-downloads]][link-downloads]
+Create and edit, post, blogs, podcast or news, a smart way to      tell your story.
 
-**Note:** To replace ```Shawn Sandy``` ```shawnsandy``` ```https://github.com/shawnsandy``` ```shawnsandy04@gmail.com``` ```shawnsandy``` ```backstory``` ```Backstory``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files. You can change them manually or run `$ php prefill.php` in the command line to make all replacements at once. Delete the file prefill.php as well.
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
-
-## Structure
-
-If any of the following are applicable to your project, then the directory structure should follow industry best practises by being named the following.
-
-```
-bin/        
-config/
-src/
-tests/
-vendor/
-```
 
 
 ## Install
 
-Via Composer
+- Installs using composer repositories add the following to your composer.json file
 
+``` json
+"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/shawnsandy/backstory"
+        }
+    ],
+```
+- Run the composer require to install the package
 ``` bash
-$ composer require shawnsandy/backstory
+composer require shawnsandy/img-fly
 ```
 
-## Usage
+### In Laravel 5.5 and higher the package automatically installs itself. If you are running Laravel  5.4 or earlier please follow the instructions below.
+
+* Add the provider to your `config\app.php` providers.
+
+```
+ShawnSandy\Backstory\BackstoryServiceProvider::class,
+```
+
+* Add the facade to your `config\app.php` alias.
+
+```
+"Backstory" => ShawnSandy\Backstory\BackstoryFacade::class,
+```
+
+### Routes
+
+* Add the route to your `routes\web.php`
 
 ``` php
-
-/////
-
+Backstory::routes();
 ```
-
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
@@ -68,17 +69,3 @@ If you discover any security related issues, please email shawnsandy04@gmail.com
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/shawnsandy/backstory.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/shawnsandy/backstory/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/shawnsandy/backstory.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/shawnsandy/backstory.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/shawnsandy/backstory.svg?style=flat-square
-
-[link-packagist]: https://packagist.org/packages/shawnsandy/backstory
-[link-travis]: https://travis-ci.org/shawnsandy/backstory
-[link-scrutinizer]: https://scrutinizer-ci.com/g/shawnsandy/backstory/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/shawnsandy/backstory
-[link-downloads]: https://packagist.org/packages/shawnsandy/backstory
-[link-author]: https://github.com/shawnsandy
-[link-contributors]: ../../contributors
