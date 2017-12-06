@@ -51,17 +51,10 @@
         </div>
     </div>
 
-    @include('backstory::partials.file-uploads', ['cover_photo' => isset($model->cover_photo) ? $model->cover_photo : null])
+    @include('backstory::partials.file-uploads',
+    ['cover_photo' => isset($model->cover_photo) ? $model->cover_photo : null])
 
-    <div class="field">
-        {{ Backstory::label('Story content', 'content') }}
-        <div class="control">
-         {{--  <p>
-            <button class="insert button">Insert</button>
-        </p>  --}}
-            {{ Backstory::content() }}
-        </div>
-    </div>
+    @include('backstory::partials.editor')
 
 
 </div>

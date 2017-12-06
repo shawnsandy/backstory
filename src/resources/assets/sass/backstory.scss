@@ -37,4 +37,17 @@
 
     }
 
+    .editor-bar {
+
+        background-color: lightgray;
+        padding: 8px;
+            border-radius: 7px 7px 0 0;
+
+        .button {
+            border-radius: 20px;
+            margin:0 5px;
+        }
+
+    }
+
 }
