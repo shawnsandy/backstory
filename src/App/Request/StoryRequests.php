@@ -81,8 +81,7 @@ class StoryRequests extends FormRequest
 	public function upload()
 	{
 		if($this->hasFile("cover_photo") && $this->file("cover_photo")->isValid())
-		            return $this->file('cover_photo')->store('img');
-
+		            return $this->file('cover_photo')->store('img','images');
 		return null;
 
 	}

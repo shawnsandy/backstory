@@ -46,8 +46,7 @@ var choicesConf = {
     addItems: true,
     placeholder: true,
     addItems: true,
-    removeItems: true,
-    placeholderValue: "Select a category for your story"
+    removeItems: true
 }
 
 
@@ -60,7 +59,7 @@ var choicesSelect = {
     placeholder: true,
     addItems: true,
     removeItems: true,
-    placeholderValue: "Select a category for your story"
+    placeholderValue: ""
 };
 
 var categoryChoices = new Choices("#category", choicesSelect);
