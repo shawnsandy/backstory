@@ -1,33 +1,37 @@
 var storyEditor = document.getElementById("content");
 CKEDITOR.replace(storyEditor, {
-    height: 300,
-    toolbarCanCollapse: true,
-    // Define the toolbar groups as it is a more accessible solution.
-    toolbarGroups: [{
-            name: "basicstyles",
-            groups: ["basicstyles"]
-        },
-        {
-            name: "links",
-            groups: ["links"]
-        },
-        {
-            name: "paragraph",
-            groups: ["list", "blocks"]
-        },
-        {
-            name: "document",
-            groups: ["mode"]
-        },
-        {
-            name: "insert",
-            groups: ["insert"]
-        },
-        {
-            name: "styles",
-            groups: ["styles"]
-        }
-    ]
+  height: 300,
+  toolbarCanCollapse: true,
+  // Define the toolbar groups as it is a more accessible solution.
+  toolbarGroups: [
+    {
+      name: "basicstyles",
+      groups: ["basicstyles"]
+    },
+    {
+      name: "links",
+      groups: ["links"]
+    },
+    {
+      name: "paragraph",
+      groups: ["list", "blocks"]
+    },
+    {
+      name: "document",
+      groups: ["mode"]
+    },
+    {
+      name: "insert",
+      groups: ["insert"]
+    },
+    {
+      name: "styles",
+      groups: ["styles"]
+    }
+  ],
+  contentsCss: [
+    "body {font-size: 18px;font-family: Arial, Helvetica, sans-serif;color: #414141;-webkit-font-smoothing: antialiased; }"
+  ]
 });
 
 var file = document.getElementById("cover-photo");

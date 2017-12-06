@@ -25,3 +25,6 @@
 .backstory .choices__list--multiple .choices__item {
   background-color: gray;
   border-color: gray; }
+
+.backstory .cke_editable {
+  color: grey; }
