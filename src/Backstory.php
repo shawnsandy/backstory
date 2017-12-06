@@ -61,12 +61,12 @@
             return html()->text('title')->class($size)->placeholder($placeholder);
         }
 
-        public function introduction($placeholder = 'Pitch (introduce) the story', $class = ['textarea'])
+        public function introduction($placeholder = 'Pitch (introduce) the story', $class = ['textarea', 'is-medium'])
         {
             return html()->textarea('introduction')->class($class)->placeholder($placeholder);
         }
 
-        public function content($placeholder = 'Lets write the next block buster', $class = ['textarea', 'content'])
+        public function content($placeholder = 'Lets write the next block buster', $class = ['textarea', 'content', 'is-medium'])
         {
             return html()->textarea('content')->class($class)->placeholder($placeholder);
         }
@@ -98,7 +98,7 @@
         public function status($value = null)
         {
             return html()->select('status', config("backstory.story_status"), $value)
-            ->class('select is-fullwidth')->placeholder('Set the post status');
+            ->class('select is-fullwidth is-medium')->placeholder('Set the post status');
         }
 
 
@@ -144,7 +144,7 @@
             $categories = StoryCategory::pluck('name', 'id');
 
             return html()->multiselect('category', $categories, $value)
-            ->class('is-fullwidth');
+            ->class('is-fullwidth', 'is-medium');
         }
 
 

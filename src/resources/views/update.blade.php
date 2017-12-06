@@ -11,7 +11,6 @@
             @endforeach
         </ul>
     </div>
-
 @endif
 </div>
 </div>
@@ -21,3 +20,4 @@
 @section("sidebar")
 @include('backstory::partials.latest-stories')
 @endsection
+

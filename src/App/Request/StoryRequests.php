@@ -31,6 +31,7 @@ class StoryRequests extends FormRequest
         'status' => 'string',
         'content' => 'string',
         'cover_photo' => 'image',
+        "category" => "sometimes|required"
 
 		];
 	}
@@ -47,10 +48,21 @@ class StoryRequests extends FormRequest
 
     public function update($id)
     {
-        if($story = Story::updateOrCreate(['id' => $id], $this->data()))
+        if($story = Story::updateOrCreate(['id' => $id], $this->data())):
+
+        $this->saveRelationships($story);
         return $story;
+        endif;
 
         return false;
+    }
+
+    public function saveRelationships($post)
+    {
+
+        if($this->has('category'))
+        $post->categories()->sync($this->input('category'));
+
     }
 
     protected function data()

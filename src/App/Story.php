@@ -100,5 +100,11 @@ class Story extends Model
 
     }
 
+    public function getCategoryAttribute(){
+
+       return $this->categories->pluck(['id']);
+
+    }
+
 
 }
