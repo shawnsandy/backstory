@@ -54,7 +54,7 @@
     @include('backstory::partials.file-uploads', ['cover_photo' => isset($model->cover_photo) ? $model->cover_photo : null])
 
     <div class="field">
-        {{ Backstory::label('Add the content of your story here', 'content') }}
+        {{ Backstory::label('Story content', 'content') }}
         <div class="control">
          {{--  <p>
             <button class="insert button">Insert</button>
