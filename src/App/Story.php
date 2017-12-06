@@ -108,7 +108,7 @@ class Story extends Model
 
     public function getCoverThumbnailAttribute()
     {
-        return "/imgfly/public/".$this->cover_photo."?w=460&h=460&fit=crop";
+        return "/imgfly/public/".$this->cover_photo.config("backstory.img.thumbs");
     }
 
 

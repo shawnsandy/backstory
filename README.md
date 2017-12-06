@@ -41,6 +41,29 @@ ShawnSandy\Backstory\BackstoryServiceProvider::class,
 ``` php
 Backstory::routes();
 ```
+
+### Dependencies
+
+Backstory requires the following dependencies
+
+Install ImgFly - adds dynamic image resizing [download and full instructions](https://github.com/shawnsandy/img-fly)
+
+- Installs using composer repositories add the following to your `composer.json` file
+
+``` php
+"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/shawnsandy/img-fly"
+        }
+    ],
+```
+- Run the composer require to install the package
+
+```
+composer require shawnsandy/img-fly
+```
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
