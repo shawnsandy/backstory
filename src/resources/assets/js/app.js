@@ -51,6 +51,7 @@ var choicesConf = {
     addItems: true,
     placeholder: true,
     addItems: true,
+    editItems: true,
     removeItems: true
 }
 
@@ -63,6 +64,7 @@ var choicesSelect = {
     addItems: true,
     placeholder: true,
     addItems: true,
+    editItems: true,
     removeItems: true,
     placeholderValue: ""
 };
