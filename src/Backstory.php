@@ -98,7 +98,7 @@
         public function status($value = null)
         {
             return html()->select('status', config("backstory.story_status"), $value)
-            ->class('select is-fullwidth is-medium')->placeholder('Set the post status');
+            ->class('select is-fullwidth is-medium');
         }
 
 

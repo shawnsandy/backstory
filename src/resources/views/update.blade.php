@@ -18,6 +18,7 @@
 @endsection
 
 @section("sidebar")
+@include("backstory::partials.edit-preview")
 @include('backstory::partials.latest-stories')
 @endsection
 

@@ -28,3 +28,10 @@
 
 .backstory .cke_editable {
   color: grey; }
+
+.backstory .editor-bar {
+  padding: 8px;
+  border-top: 1px solid lightgray; }
+  .backstory .editor-bar .button {
+    border-radius: 20px;
+    margin: 0 5px; }

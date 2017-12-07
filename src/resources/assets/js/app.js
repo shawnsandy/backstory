@@ -34,6 +34,11 @@ CKEDITOR.replace(storyEditor, {
   ]
 });
 
+  u(".insert").on("click", function(e) {
+    e.preventDefault();
+    CKEDITOR.instances.content.insertHtml('<p><img src="http://staging.shawnsandy.design/imgfly/images/jarvis.jpeg?w=448&amp;h=340&amp;fit=crop-top" alt=""></p>');
+  });
+
 var file = document.getElementById("cover-photo");
 file.onchange = function () {
     if (file.files.length > 0) {
@@ -46,8 +51,8 @@ var choicesConf = {
     addItems: true,
     placeholder: true,
     addItems: true,
-    removeItems: true,
-    placeholderValue: "Select a category for your story"
+    editItems: true,
+    removeItems: true
 }
 
 
@@ -59,8 +64,9 @@ var choicesSelect = {
     addItems: true,
     placeholder: true,
     addItems: true,
+    editItems: true,
     removeItems: true,
-    placeholderValue: "Select a category for your story"
+    placeholderValue: ""
 };
 
 var categoryChoices = new Choices("#category", choicesSelect);

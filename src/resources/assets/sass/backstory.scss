@@ -37,4 +37,17 @@
 
     }
 
+    .editor-bar {
+
+
+        padding: 8px;
+        border-top: 1px solid lightgray;
+
+        .button {
+            border-radius: 20px;
+            margin:0 5px;
+        }
+
+    }
+
 }
