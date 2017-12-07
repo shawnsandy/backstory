@@ -5,9 +5,9 @@
     <p class="subtitle is-5 is-uppercase">{{ $title or "Apps" }}</p>
     {{ $slot }}
     <p class="subtitle">{{ $footer or "" }}</p>
-    <hr>
      <p class="has-text-right">
-    <button type="button" class="button is-outlined close-box"><i class="fa fa-close"></i></button>
+    <button type="button" class="button is-small is-outlined close-box">
+    <span class="icon"><i class="fa fa-close"></i> </span><span>Close</span></button>
     </p>
   </div>
   </div>

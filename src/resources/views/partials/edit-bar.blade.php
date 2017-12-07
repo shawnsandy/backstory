@@ -27,15 +27,17 @@
         </div>
     </div>
 </div>
-@include('backstory::partials.manage-images')
-@include('backstory::partials.manage-videos')
-@include('backstory::partials.manage-code')
+
 @push('scripts')
     <script>
 
     var imageButton = u(".image-button");
     var videoButton = u(".video-button");
     var codeButton = u(".code-button");
+
+    function launchModals(el, mmodal){
+
+    }
 
     u(imageButton).on("click", function(e){
         e.preventDefault();
