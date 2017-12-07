@@ -14,6 +14,11 @@
         </div>
     </div>
 
+    @include('backstory::partials.editor')
+
+
+    @include('backstory::partials.file-uploads',
+    ['cover_photo' => isset($model->cover_photo) ? $model->cover_photo : null])
 
     <div class="field">
         {{ Backstory::label('Categories', 'category')->class('label') }}
@@ -51,10 +56,7 @@
         </div>
     </div>
 
-    @include('backstory::partials.file-uploads',
-    ['cover_photo' => isset($model->cover_photo) ? $model->cover_photo : null])
 
-    @include('backstory::partials.editor')
 
 
 </div>

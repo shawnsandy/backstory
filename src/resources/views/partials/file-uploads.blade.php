@@ -8,7 +8,7 @@
           <i class="fa fa-upload"></i>
         </span>
         <spanclass="file-label">
-          Upload Cover Photo
+         Cover Photo
         </span>
       </span>
       <span id="file-name" class="file-name is-primary">
