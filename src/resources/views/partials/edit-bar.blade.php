@@ -43,6 +43,7 @@
         u('.image-modal').addClass('is-active');
     })
 
+
     u(videoButton).on("click", function(e){
         e.preventDefault();
         console.log("button clicked")
@@ -59,6 +60,16 @@
         e.preventDefault();
         u('.modal').removeClass('is-active');
     })
+
+    var launchModals = function(button, modal){
+
+        u(button).on("click", function(e){
+        e.preventDefault();
+        console.log("button clicked")
+        u(modal).addClass('is-active');
+    })
+
+    }
 
     </script>
 @endpush
