@@ -30,7 +30,7 @@ CKEDITOR.replace(storyEditor, {
     }
   ],
   contentsCss: [
-    "body {font-size: 18px;font-family: Arial, Helvetica, sans-serif;color: #414141;-webkit-font-smoothing: antialiased; }"
+    "body {font-size: 16px;font-family: Arial, Helvetica, sans-serif;color: #757575;-webkit-font-smoothing: antialiased; }"
   ]
 });
 
