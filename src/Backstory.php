@@ -10,6 +10,7 @@
 
     use ShawnSandy\Backstory\App\StoryCategory;
     use ShawnSandy\Backstory\App\Story;
+    use Illuminate\Support\Facades\Storage;
 
 
     class Backstory
@@ -157,6 +158,23 @@
         public function latestStories($limit =20)
         {
             return Story::latest()->take($limit)->get();
+        }
+
+        /**
+         * Get the images from
+         *
+         * @param string $disk
+         * @param string $directory
+         * @return array
+         */
+        public function getImgs($disk = 'images', $directory = 'img')
+        {
+            return Storage::disk($disk)->files($directory);
+        }
+
+        public function imgFly($image, $size = 'small')
+        {
+            return "/imgfly/public/$image".config("backstory.img.$size");
         }
 
 

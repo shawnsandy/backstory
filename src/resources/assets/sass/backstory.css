@@ -30,8 +30,32 @@
   color: grey; }
 
 .backstory .editor-bar {
-  padding: 8px;
+  padding: 10px;
   border-top: 1px solid lightgray; }
   .backstory .editor-bar .button {
     border-radius: 20px;
     margin: 0 5px; }
+
+.backstory .modal-content {
+  width: 860px; }
+
+.backstory .story-images {
+  max-height: 600px;
+  width: 100%;
+  overflow: hidden; }
+
+@media screen and (min-width: 769px) {
+  .modal-content {
+    margin: 0 auto;
+    max-height: calc(100vh - 100px); } }
+
+@media screen and (min-width: 769px) {
+  .modal-card,
+  .modal-content {
+    margin: 0 auto;
+    max-height: calc(100vh - 200px);
+    width: 75%; } }
+
+@media screen and (min-width: 1024px) {
+  .container.is-fluid.image-fields {
+    width: 100%; } }

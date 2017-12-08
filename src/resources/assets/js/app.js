@@ -1,6 +1,6 @@
 var storyEditor = document.getElementById("content");
 CKEDITOR.replace(storyEditor, {
-  height: 300,
+  height: 400,
   toolbarCanCollapse: true,
   // Define the toolbar groups as it is a more accessible solution.
   toolbarGroups: [
@@ -30,9 +30,18 @@ CKEDITOR.replace(storyEditor, {
     }
   ],
   contentsCss: [
-    "body {font-size: 18px;font-family: Arial, Helvetica, sans-serif;color: #414141;-webkit-font-smoothing: antialiased; }"
+    "body {font-size: 16px;font-family: Arial, Helvetica, sans-serif;color: #757575;-webkit-font-smoothing: antialiased; line-height: 1.6; }"
   ]
 });
+
+    u(".insert-images-button").each(function(el, i) {
+      u(el).on("click", function(e) {
+        var image = u(el).data("img");
+        u(".image-input").attr("value", image);
+        console.log("image click " + image);
+        CKEDITOR.instances.content.insertHtml('<img src="' + image + '" alt="">');
+      });
+    });
 
   u(".insert").on("click", function(e) {
     e.preventDefault();
