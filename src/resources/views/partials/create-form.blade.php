@@ -63,12 +63,14 @@
 @push("styles")
 {{--  <link rel="stylesheet" href="/assets/backstory/choices/base.min.css">  --}}
 <link rel="stylesheet" href="/assets/backstory/choices/choices.min.css">
+<script src="/assets/backstory/ckeditor/plugins/codesnippet/lib/highlight/styles/default.css"></script>
 @endpush
 
 @push('scripts')
 <script src="/assets/backstory/ckeditor/ckeditor.js"></script>
+<script src="/assets/backstory/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
 <script src="/assets/backstory/choices/choices.min.js"></script>
-<script>
 
-</script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 @endpush

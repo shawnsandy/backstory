@@ -29,6 +29,8 @@ CKEDITOR.replace(storyEditor, {
       groups: ["styles"]
     }
   ],
+  extraPlugins: "codesnippet",
+  codeSnippet_theme: "monokai_sublime",
   contentsCss: [
     "body {font-size: 16px;font-family: Arial, Helvetica, sans-serif;color: #757575;-webkit-font-smoothing: antialiased; line-height: 1.6; }"
   ]
@@ -37,7 +39,6 @@ CKEDITOR.replace(storyEditor, {
     u(".insert-images-button").each(function(el, i) {
       u(el).on("click", function(e) {
         var image = u(el).data("img");
-        u(".image-input").attr("value", image);
         console.log("image click " + image);
         CKEDITOR.instances.content.insertHtml('<img src="' + image + '" alt="">');
       });
@@ -47,6 +48,28 @@ CKEDITOR.replace(storyEditor, {
     e.preventDefault();
     CKEDITOR.instances.content.insertHtml('<p><img src="http://staging.shawnsandy.design/imgfly/images/jarvis.jpeg?w=448&amp;h=340&amp;fit=crop-top" alt=""></p>');
   });
+
+  u(".insert-video-button").on("click", function(e){
+
+      e.preventDefault();
+      console.log("video box");
+    //   var vid = document.getElementById("video-embed").value;
+      var vid = u('#video-embed').attr("value");
+      console.log(vid);
+      CKEDITOR.instances.content.insertHtml(vid);
+
+  })
+
+//   u(".code-insert-button").on("click", function(e){
+
+//       e.preventDefault();
+//       console.log("code box");
+//     //   var vid = document.getElementById("video-embed").value;
+//       var code = document.getElementById("code-box").value;
+//       console.log(code);
+//       CKEDITOR.instances.content.insertHtml("<pre><code>"+code+"</pre></code>");
+
+//   })
 
 var file = document.getElementById("cover-photo");
 file.onchange = function () {
