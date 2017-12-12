@@ -16,6 +16,7 @@
 </div>
 
 </div>
+<p class="subtitle is-2 is-capitalized">Create a new Story</p>
 @include('backstory::forms.create')
 @endsection
 

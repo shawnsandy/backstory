@@ -11,8 +11,8 @@
   font-weight: normal;
   text-transform: uppercase; }
 
-.backstory .button.is-rounded {
-  border-radius: 30%; }
+.backstory .is-rounded {
+  border-radius: 30px; }
 
 .backstory textarea {
   overflow: hidden; }
