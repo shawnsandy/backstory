@@ -57,9 +57,10 @@ CKEDITOR.replace(storyEditor, {
       e.preventDefault();
       console.log("video box");
     //   var vid = document.getElementById("video-embed").value;
-      var vid = u('#video-embed').attr("value");
+      // var vid = u('#video-embed').attr("value");
       console.log(vid);
-      CKEDITOR.instances.content.insertHtml(vid);
+      CKEDITOR.instances.content.insertHtml("<p>[video ='dsds']</p>");
+      var vid = document.getElementById("video-embed").value = "";
 
   })
 
