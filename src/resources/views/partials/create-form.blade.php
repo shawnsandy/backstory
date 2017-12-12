@@ -67,7 +67,5 @@
 <script src="/assets/backstory/ckeditor/ckeditor.js"></script>
 <script src="/assets/backstory/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
 <script src="/assets/backstory/choices/choices.min.js"></script>
-
 <script>hljs.initHighlightingOnLoad();</script>
-
 @endpush

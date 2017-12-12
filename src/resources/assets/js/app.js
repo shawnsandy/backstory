@@ -1,42 +1,44 @@
 var storyEditor = document.getElementById("content");
 CKEDITOR.replace(storyEditor, {
-  height: 400,
-  toolbarCanCollapse: true,
-  // Define the toolbar groups as it is a more accessible solution.
-  toolbarGroups: [
-    {
-      name: "basicstyles",
-      groups: ["basicstyles"]
-    },
-    {
-      name: "links",
-      groups: ["links"]
-    },
-    {
-      name: "paragraph",
-      groups: ["list", "blocks"]
-    },
-    {
-      name: "document",
-      groups: ["mode"]
-    },
-    {
-      name: "insert",
-      groups: ["insert"]
-    },
-    {
-      name: "styles",
-      groups: ["styles"]
-    }
-  ],
-  extraPlugins: "codesnippet",
-  codeSnippet_theme: "monokai_sublime",
-  autoGrow_minHeight: 460,
-  autoGrow_onStartup: true,
-  contentsCss: [
-    "body {font-size: 16px;font-family: Arial, Helvetica, sans-serif;color: #757575;-webkit-font-smoothing: antialiased; line-height: 1.6; }",
-    "img {  height: auto; max-width: 100%; }"
-  ]
+    height: 400,
+    toolbarCanCollapse: true,
+
+    // Define the toolbar groups as it is a more accessible solution.
+    toolbarGroups: [
+        {
+            name: "basicstyles",
+            groups: ["basicstyles"]
+        },
+        {
+            name: "links",
+            groups: ["links"]
+        },
+        {
+            name: "paragraph",
+            groups: ["list", "blocks"]
+        },
+        {
+            name: "document",
+            groups: ["mode"]
+        },
+        {
+            name: "insert",
+            groups: ["insert"]
+        },
+        {
+            name: "styles",
+            groups: ["styles"]
+        }
+    ],
+    embed_provider: '//ckeditor.iframe.ly/api/oembed?url={url}&callback={callback}',
+    extraPlugins: "codesnippet,embed,autoembed,image2",
+    codeSnippet_theme: "monokai_sublime",
+    autoGrow_minHeight: 460,
+    autoGrow_onStartup: true,
+    contentsCss: [
+        "body {font-size: 16px;font-family: Arial, Helvetica, sans-serif;color: #757575;-webkit-font-smoothing: antialiased; line-height: 1.6; }",
+        "img {  height: auto; max-width: 100%; }"
+    ]
 });
 
     u(".insert-images-button").each(function(el, i) {
