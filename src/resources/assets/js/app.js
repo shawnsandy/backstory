@@ -31,8 +31,11 @@ CKEDITOR.replace(storyEditor, {
   ],
   extraPlugins: "codesnippet",
   codeSnippet_theme: "monokai_sublime",
+  autoGrow_minHeight: 460,
+  autoGrow_onStartup: true,
   contentsCss: [
-    "body {font-size: 16px;font-family: Arial, Helvetica, sans-serif;color: #757575;-webkit-font-smoothing: antialiased; line-height: 1.6; }"
+    "body {font-size: 16px;font-family: Arial, Helvetica, sans-serif;color: #757575;-webkit-font-smoothing: antialiased; line-height: 1.6; }",
+    "img {  height: auto; max-width: 100%; }"
   ]
 });
 
@@ -40,13 +43,13 @@ CKEDITOR.replace(storyEditor, {
       u(el).on("click", function(e) {
         var image = u(el).data("img");
         console.log("image click " + image);
-        CKEDITOR.instances.content.insertHtml('<img src="' + image + '" alt="">');
+        CKEDITOR.instances.content.insertHtml('<img src="' + image + '" alt="" class="image">');
       });
     });
 
   u(".insert").on("click", function(e) {
     e.preventDefault();
-    CKEDITOR.instances.content.insertHtml('<p><img src="http://staging.shawnsandy.design/imgfly/images/jarvis.jpeg?w=448&amp;h=340&amp;fit=crop-top" alt=""></p>');
+    CKEDITOR.instances.content.insertHtml('<p><img class="image"  src="http://staging.shawnsandy.design/imgfly/images/jarvis.jpeg?w=448&amp;h=340&amp;fit=crop-top" alt=""></p>');
   });
 
   u(".insert-video-button").on("click", function(e){
@@ -60,16 +63,6 @@ CKEDITOR.replace(storyEditor, {
 
   })
 
-//   u(".code-insert-button").on("click", function(e){
-
-//       e.preventDefault();
-//       console.log("code box");
-//     //   var vid = document.getElementById("video-embed").value;
-//       var code = document.getElementById("code-box").value;
-//       console.log(code);
-//       CKEDITOR.instances.content.insertHtml("<pre><code>"+code+"</pre></code>");
-
-//   })
 
 var file = document.getElementById("cover-photo");
 file.onchange = function () {
