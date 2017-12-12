@@ -38,7 +38,8 @@
         }
 
     </style>
-    @stack('styles') @stack('inline-styles')
+    @stack('styles')
+    @stack('inline-styles')
 </head>
 
 <body>
@@ -84,7 +85,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/umbrellajs@2.9.0/umbrella.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
-@stack('scripts') @stack('inline_scripts')
+@stack('scripts')
+@stack('inline_scripts')
 <script src="/assets/backstory/app.js"></script>
 
 </html>

@@ -10,7 +10,7 @@ Insert Videos
 </div>
    @slot('footer')
     <p class="">
-    <button type="button" class="button is-success close-box">Insert video</button>
+    <button type="button" class="button is-success close-box insert-video-button">Insert video</button>
     </p>
 @endslot
 @endcomponent

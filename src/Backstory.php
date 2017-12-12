@@ -11,7 +11,7 @@
     use ShawnSandy\Backstory\App\StoryCategory;
     use ShawnSandy\Backstory\App\Story;
     use Illuminate\Support\Facades\Storage;
-
+    use Collective\Html\FormFacade as Forms;
 
     class Backstory
     {
@@ -56,20 +56,23 @@
         }
 
 
-        public function title($placeholder = 'Enter a catchy title for your story', $size = ['is-large', 'input'])
+        public function title($placeholder = 'Enter a catchy title for your story', $class = 'is-large input')
         {
 
-            return html()->text('title')->class($size)->placeholder($placeholder);
+//            return html()->text('title')->class($size)->placeholder($placeholder);
+            return Forms::text('title', null,  ["class" => $class, "placeholder" => $placeholder]);
+
         }
 
-        public function introduction($placeholder = 'Pitch (introduce) the story', $class = ['textarea', 'is-medium'])
+        public function introduction($placeholder = 'Pitch (introduce) the story', $class = 'textarea is-medium')
         {
-            return html()->textarea('introduction')->class($class)->placeholder($placeholder);
+//            return html()->textarea('introduction')->class($class)->placeholder($placeholder);
+            return Forms::textarea('introduction', null, ['class' => $class, 'placeholder' => $placeholder]);
         }
 
         public function content($placeholder = 'Lets write the next block buster', $class = ['textarea', 'content', 'is-medium'])
         {
-            return html()->textarea('content')->class($class)->placeholder($placeholder);
+            return Forms::textarea('content', null, ['id' => 'content', 'class' => 'textarea content is-medium'] );
         }
 
         /**
@@ -80,14 +83,16 @@
          */
         public function featured($value = null)
         {
-            return html()->select('featured', $options = ['1' => 'Yes', '0' => 'No'], $value)
-            ->class('select is-fullwidth')->placeholder('Would you like this story featured');
+           // return html()->select('featured', , $value)
+           // ->class('select is-fullwidth')->placeholder('Would you like this story featured');
+        return Forms::select('featured', ['1' => 'Yes', '0' => 'No'], null, ['class' => 'select is-fullwidth', 'id' => 'featured'] );
         }
 
         public function type($value = null)
         {
-            return html()->select('type', config("backstory.story_types"), $value)
-            ->class('select is-fullwidth')->placeholder('Select a story type');
+            // return html()->select('type', config("backstory.story_types"), $value)
+            // ->class('select is-fullwidth')->placeholder('Select a story type');
+            return Forms::select('type', config("backstory.story_types"), null, ['id' => "type", 'class' => 'select is-fullwidth']);
         }
 
         /**
@@ -98,8 +103,9 @@
          */
         public function status($value = null)
         {
-            return html()->select('status', config("backstory.story_status"), $value)
-            ->class('select is-fullwidth is-medium');
+            // html()->select('status', config("backstory.story_status"), $value)
+            // ->class('select is-fullwidth is-medium');
+            return Forms::select('status', config("backstory.story_status"), null, ['id' => "status", 'class' => 'select is-fullwidth']);
         }
 
 
@@ -112,10 +118,10 @@
         public function newForm($model = null)
         {
             if(!is_null($model)):
-            return html()->modelForm($model, 'PUT', "/story/create/{$model->id}")->acceptsFiles()->open();
+            return Forms::model($model, ['url' => "/story/create/{$model->id}", "method" => "put", 'files' => true]);
             endif;
 
-            return html()->form('POST',  "/story/create")->acceptsFiles()->open();
+            return Forms::open(['url' => "/story/create", 'method' => 'post', 'files' => true]);
         }
 
         /**
@@ -126,11 +132,7 @@
          */
         public function formClose($close_model = false)
         {
-            if($close_model)
-            return html()->closeModelForm();
-
-            return html()->form()->close();
-
+            Forms::close();
         }
 
          /**
@@ -144,8 +146,9 @@
             if(empty($categories))
             $categories = StoryCategory::pluck('name', 'id');
 
-            return html()->multiselect('category', $categories, $value)
-            ->class('is-fullwidth', 'is-medium');
+            // return html()->multiselect('category', $categories, $value)
+            // ->class('is-fullwidth', 'is-medium');
+            return Forms::select('category', $categories, null, ['id' => 'category', 'class' => 'select is-fullwidth', 'multiple']);
         }
 
 

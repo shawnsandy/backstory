@@ -18,12 +18,12 @@
                 </span>
                 <span>Video</span>
             </button>
-            <button type="button" class="code-button button is-small">
+            {{--  <button type="button" class="code-button button is-small">
                 <span class="icon">
                     <i class="fa fa-code" aria-hidden="true"></i>
                 </span>
                 <span>Code</span>
-            </button>
+            </button>  --}}
         </div>
     </div>
 </div>

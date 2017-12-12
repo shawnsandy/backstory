@@ -8,7 +8,7 @@
     </div>
 </div>
 <p class="">
-    <button class="button is-success">Insert Code</button>
+    <button class="button is-success code-insert-button close-box">Insert Code</button>
 </p>
 @slot('footer')
 @endslot
