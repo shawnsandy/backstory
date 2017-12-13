@@ -1,11 +1,11 @@
 
 @foreach(backstory()->latestStories(10) as $story)
 <div class="content is-large">
-    <h3 class="">
+    <h3 class="is-uppercase">
         {{ $story->title }}
     </h3>
     @if(!empty($story->cover))
-    <img src="{{ $story->cover }}" alt="">
+    <a href="{{ url("story") }}/{{ $story->id }}" class=""><img src="{{ $story->cover }}" alt=""></a>
     @endif
     <p class="is-size-5">
     {{ $story->introduction }}
