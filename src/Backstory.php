@@ -60,14 +60,14 @@
         {
 
 //            return html()->text('title')->class($size)->placeholder($placeholder);
-            return Forms::text('title', null,  ["class" => $class, "placeholder" => $placeholder]);
+            return Forms::text('title', null,  ["class" => $class, "placeholder" => $placeholder, 'required']);
 
         }
 
         public function introduction($placeholder = 'Pitch (introduce) the story', $class = 'textarea is-medium')
         {
 //            return html()->textarea('introduction')->class($class)->placeholder($placeholder);
-            return Forms::textarea('introduction', null, ['class' => $class, 'placeholder' => $placeholder]);
+            return Forms::textarea('introduction', null, ['class' => $class, 'placeholder' => $placeholder, 'rows' =>3]);
         }
 
         public function content($placeholder = 'Lets write the next block buster', $class = ['textarea', 'content', 'is-medium'])
@@ -158,7 +158,7 @@
          * @param integer $limit
          * @return void
          */
-        public function latestStories($limit =20)
+        public function latestStories($limit = 10)
         {
             return Story::latest()->take($limit)->get();
         }

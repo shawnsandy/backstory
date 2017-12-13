@@ -7,6 +7,13 @@
         </div>
     </div>
 
+    @include('backstory::partials.editor')
+<hr>
+    <p class="subtitle is-3 is-uppercase">Story Options</p>
+
+ @include('backstory::partials.file-uploads',
+    ['cover_photo' => isset($model->cover_photo) ? $model->cover_photo : null])
+
     <div class="field">
         {{ Backstory::label('Introduction', 'introduction')->class('checkbox') }}
         <div class="control">
@@ -14,10 +21,6 @@
         </div>
     </div>
 
-    @include('backstory::partials.editor')
-
-    @include('backstory::partials.file-uploads',
-    ['cover_photo' => isset($model->cover_photo) ? $model->cover_photo : null])
 
     <div class="field">
         {{ Backstory::label('Categories', 'category')->class('label') }}

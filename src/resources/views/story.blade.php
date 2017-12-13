@@ -2,14 +2,12 @@
 @extends('backstory::layouts.layout')
 
 @section('content')
-<div class="container content">
-<p class="title is-2">
+<div class="content">
+<p class="title is-1">
 {{ $story->title }}
 </p>
 
-<div class="story">
 {!! $story->content !!}
-</div>
 
 </div>
 
