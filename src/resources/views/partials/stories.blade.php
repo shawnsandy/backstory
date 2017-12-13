@@ -1,12 +1,20 @@
 
 @foreach(backstory()->latestStories(10) as $story)
-<div class="content is-large">
-    <h3 class="is-uppercase">
-        {{ $story->title }}
-    </h3>
+<article class="content is-medium">
+<p class="is-small has-text-right">
+<div class="tags has-addons has-text-right">
+<span class="tag">Author</span>
+<span class="tag is-dark">{{ $story->by }}</span>
+</div>
+</p>
     @if(!empty($story->cover))
     <a href="{{ url("story") }}/{{ $story->id }}" class=""><img src="{{ $story->cover }}" alt=""></a>
     @endif
+
+    <h2 class="is-uppercase">
+        {{ $story->title }}
+    </h2>
+
     <p class="is-size-5">
     {{ $story->introduction }}
     </p>
@@ -17,5 +25,5 @@
         </span>
     </p>
     <hr>
-</div>
+</article>
 @endforeach

@@ -30,9 +30,15 @@
                 @yield("page_subtitle", "A Simple way to create content in laravel (post stories, articles, podcast)" )
                 </p>
                 @auth
-                <p class=""><a href="{{ config("backstory.stories.create_url") }}" class="button is-rounded is-info is-outlined">Create a new Story</a>
+                <p class="">
+                <a href="{{ config("backstory.stories.create_url") }}" class="button is-rounded is-light is-outlined">Create a new Story</a>
+
+                <button type="button" class="button is-rounded is-light is-outlined manage-categories">Categories</button>
                 </p>
+
                 @endauth
+
+                @include('backstory::components.modals-categories')
 
             <div class="col-md-12">
                 @include('backstory::partials.messages')
@@ -68,6 +74,7 @@
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/umbrellajs@2.9.0/umbrella.min.js"></script>
+
 <!-- Latest compiled and minified JavaScript -->
 @stack('scripts')
 @stack('inline_scripts')

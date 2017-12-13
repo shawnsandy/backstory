@@ -58,11 +58,6 @@
         u('.code-modal').addClass('is-active');
     })
 
-    u(".modal-close, .close-box").on('click', function(e){
-        e.preventDefault();
-        u('.modal').removeClass('is-active');
-    })
-
     var launchModals = function(button, modal){
 
         u(button).on("click", function(e){

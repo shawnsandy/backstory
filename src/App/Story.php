@@ -21,7 +21,7 @@ class Story extends Model
 
     public function author()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function categories()
@@ -104,6 +104,11 @@ class Story extends Model
 
        return $this->categories->pluck(['id']);
 
+    }
+
+    public function getByAttribute()
+    {
+        return $this->author->name;
     }
 
     public function getCoverThumbnailAttribute()
