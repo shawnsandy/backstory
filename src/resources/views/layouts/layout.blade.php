@@ -1,9 +1,8 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title') | Backstory</title>
     <meta name="description" content="@yield('description', 'Site description')">
     <meta name="author" content="Shawn Sandy">
@@ -22,7 +21,7 @@
 </head>
 
 <body class="backstory">
-        <div class="section hero is-light @yield("hero_size") ">
+        <div class="section hero is-light @yield("hero_class", "is-dark") ">
         <div class="container">
                 <h1 class="title is-1 is-large">
                    <a href="/stories">@yield("page_title", "BackStory")</a>

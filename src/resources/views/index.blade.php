@@ -1,6 +1,6 @@
 @extends('backstory::layouts.layout')
 @section('title', 'backstory')
-@section('hero_size', 'is-medium is-dark')
+@section('hero_class', 'is-medium is-dark')
 @section('content')
 
 @include('backstory::partials.stories')
