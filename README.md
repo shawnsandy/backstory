@@ -17,7 +17,7 @@ Tell Your Story. Backstory is a package for creating and editing, content in you
 
 - Run the composer require to install the package
 ``` bash
-composer require shawnsandy/backstory
+composer require shawnsandy/backstory dev-master
 ```
 
 ### In Laravel 5.5 and higher the package automatically installs itself. If you are running Laravel 5.4 or earlier please follow the instructions below.
@@ -61,7 +61,7 @@ Install ImgFly - adds dynamic image resizing [download and full instructions](ht
 - Run the composer require to install the package
 
 ```
-composer require shawnsandy/img-fly
+composer require shawnsandy/img-fly dev-master
 ```
 
 ## Change log
