@@ -1,7 +1,7 @@
 @if ($paginator->hasPages())
     <nav class="pagination is-centered">
         @if ($paginator->onFirstPage())
-            <a class="pagination-previous" disabled>Previous</a>
+            <a class="pagination-previous is-rounded" disabled>Previous</a>
         @else
             <a href="{{ $paginator->previousPageUrl() }}" rel="prev" class="pagination-previous">Previous</a>
         @endif

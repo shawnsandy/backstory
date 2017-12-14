@@ -9,7 +9,7 @@
 @section("sidebar")
 
 @component('backstory::components.categories')
-    <p class="is-size-4">
+    <p class="is-size-7 has-text-right is-uppercase">
     Story Categories
     <hr>
     </p>
