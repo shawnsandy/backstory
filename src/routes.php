@@ -30,7 +30,6 @@ Route::group(["middleware" => ["auth"]], function () {
 
 	});
 
-
     Route::group(['prefix' => 'story', ], function(){
 
 
