@@ -19,6 +19,7 @@ Route::get('/story/category/{id}', function($id){
 
     $stories = Story::hasCategory($id)
     ->paginate(config('backstory.stories_per_page'));
+
     return view("backstory::index", compact('stories'));
 
 });
@@ -47,11 +48,6 @@ Route::group(["middleware" => ["auth"]], function () {
 
         Route::resource('/create', "\ShawnSandy\Backstory\App\Controllers\StoryController",
 	    ['only' => ["store", "update", "destroy"]]);
-
-
-        Route::resource('/meta', "\ShawnSandy\Backstory\App\Controllers\StoryMetaController",
-	    ['only' => ["store", "update", "destroy"]]);
-
 
         Route::resource('/options', "\ShawnSandy\Backstory\App\Controllers\StoryOptionsController",
 	    ['only' => ["store", "update", "destroy"]]);
