@@ -7,6 +7,7 @@ return [
     'article' => 'Article',
     'podcast' => 'Podcast'
     ],
+    'stories_per_page' => 5,
     'story_status' => [
     'DRAFT' => 'DRAFT',
     'PUBLISHED' => 'PUBLISHED',

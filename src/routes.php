@@ -9,7 +9,24 @@
 
  use ShawnSandy\Backstory\App\Story;
 
-Route::view("stories", "backstory::index");
+Route::get("stories", function() {
+    $stories = backstory()->latestStories();;
+
+ return view("backstory::index", compact('stories'));
+} );
+
+Route::get('/story/category/{id}', function($id){
+
+    $stories = Story::with('categories', 'author')->whereHas('categories', function($qry) use($id) {
+
+        $qry->where('id', $id);
+
+    })->paginate(config('backstory.stories_per_page'));
+
+
+    return view("backstory::index", compact('stories'));
+
+});
 
 Route::get("story/{id}", function($id){
 

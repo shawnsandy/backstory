@@ -158,9 +158,9 @@
          * @param integer $limit
          * @return void
          */
-        public function latestStories($limit = 10)
+        public function latestStories()
         {
-            return Story::latest()->with('author')->take($limit)->get();
+            return Story::latest()->with('author')->paginate(config('backstory.stories_per_page', 10));
         }
 
         /**
@@ -178,6 +178,11 @@
         public function imgFly($image, $size = 'small')
         {
             return "/imgfly/public/$image".config("backstory.img.$size");
+        }
+
+        public function categories()
+        {
+            return StoryCategory::all();
         }
 
 

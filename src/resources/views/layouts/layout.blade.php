@@ -35,7 +35,7 @@
 
 
 
-                <button type="button" class="button is-rounded is-light is-outlined manage-categories is-invisible">Categories</button>
+                <button type="button" class="button is-rounded is-light is-outlined manage-categories is-invisible">Add Categories</button>
                 </p>
 
                 @endauth
@@ -59,7 +59,7 @@
                 </div>
                 </div>
 
-                <div class="column is-one-quarter">
+                <div class="column is-4">
                 <div class="container is-fluid">
                         @yield('sidebar')
                 </div>

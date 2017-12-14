@@ -3,9 +3,16 @@
 @section('hero_class', 'is-medium is-dark')
 @section('content')
 
-@include('backstory::partials.stories')
+@include('backstory::partials.stories', ['stories' => $stories])
 
 @endsection
 @section("sidebar")
+
+@component('backstory::components.categories')
+    <p class="is-size-7 has-text-right is-uppercase">
+    Story Categories
+
+    </p>
+@endcomponent
 
 @endsection
