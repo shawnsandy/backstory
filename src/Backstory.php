@@ -158,9 +158,9 @@
          * @param integer $limit
          * @return void
          */
-        public function latestStories($limit = 10)
+        public function latestStories()
         {
-            return Story::latest()->with('author')->take($limit)->get();
+            return Story::latest()->with('author')->paginate(config('backstory.stories_per_page', 10));
         }
 
         /**

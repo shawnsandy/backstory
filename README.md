@@ -81,7 +81,9 @@ __Larvel Blade Directives__
 
 - Install info [please check the repo](https://github.com/appstract/laravel-blade-directives)
 
-### Basic usage
+### Demo usage
+
+Backstory comes with a prebuilt sample of the application that you can use to demo its functionalities and features.
 
 - Once installed you can view and create articles by visiting `yourapp.com/stories`
 - Click the create new story button
@@ -109,7 +111,6 @@ If you discover any security related issues, please email `shawnsandy04@gmail.co
 ## Credits
 
 - [Shawn Sandy](http://shawnsandy.design)
-
 
 ## License
 
