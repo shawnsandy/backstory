@@ -33,7 +33,9 @@
                 <p class="">
                 <a href="{{ config("backstory.stories.create_url") }}" class="button is-rounded is-light is-outlined">Create a new Story</a>
 
-                <button type="button" class="button is-rounded is-light is-outlined manage-categories">Categories</button>
+
+
+                <button type="button" class="button is-rounded is-light is-outlined manage-categories is-invisible">Categories</button>
                 </p>
 
                 @endauth
@@ -43,11 +45,11 @@
 
         </div>
     </div>
-
-    <section class="section">
-<div class="col-md-12">
+<div class="">
                 @include('backstory::partials.messages')
             </div>
+
+    <section class="section">
         <div class="container">
            <div class="columns">
 

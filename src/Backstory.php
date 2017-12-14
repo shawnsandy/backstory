@@ -148,7 +148,7 @@
 
             // return html()->multiselect('category', $categories, $value)
             // ->class('is-fullwidth', 'is-medium');
-            return Forms::select('category', $categories, null, ['id' => 'category', 'class' => 'select is-fullwidth', 'multiple']);
+            return Forms::select('category[]', $categories, null, ['id' => 'category', 'class' => 'select is-fullwidth', 'multiple']);
         }
 
 

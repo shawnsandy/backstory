@@ -69,6 +69,16 @@ if (storyEditor) {
 
 }
 
+u(".manage-categories").handle("click", function (e) {
+    //console.log("manage categories");
+    u(".modal.categories").addClass("is-active");
+});
+
+u(".modal-close, .close-box").handle("click", function(e) {
+//e.preventDefault();
+u(".modal").removeClass("is-active");
+});
+
 if (storyForm.length > 0) {
     var file = document.getElementById("cover-photo");
     if (file) {
@@ -102,13 +112,6 @@ if (storyForm.length > 0) {
 
     var categoryChoices = new Choices("#category", choicesSelect);
 
-}
-u(".manage-categories").handle("click", function (e) {
-    //console.log("manage categories");
-    u(".modal.categories").addClass("is-active");
-});
+    u(".manage-categories").removeClass('is-invisible')
 
-u(".modal-close, .close-box").handle("click", function(e) {
-//e.preventDefault();
-u(".modal").removeClass("is-active");
-});
+}
