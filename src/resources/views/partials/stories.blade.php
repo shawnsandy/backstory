@@ -1,5 +1,7 @@
-
-@foreach(backstory()->latestStories(config('backstory.stories_per_page', 10)) as $story)
+@php
+$stories = backstory()->latestStories();
+@endphp
+@foreach($stories as $story)
 <article class="content is-medium">
 <p class="is-small has-text-right">
 <div class="tags has-addons has-text-right">
@@ -11,9 +13,9 @@
     <a href="{{ url("story") }}/{{ $story->id }}" class=""><img src="{{ $story->cover }}" alt=""></a>
     @endif
 
-    <h2 class="is-uppercase">
+    <h1 class="is-uppercase title">
         {{ $story->title }}
-    </h2>
+    </h1>
 
     <p class="is-size-5">
     {{ $story->introduction }}
@@ -27,3 +29,6 @@
     <hr>
 </article>
 @endforeach
+<div class="section">
+{{ $stories->links('backstory::components.paginate') }}
+</div>
