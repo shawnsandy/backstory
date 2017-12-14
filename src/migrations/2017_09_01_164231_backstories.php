@@ -20,7 +20,7 @@ class Backstories extends Migration
 			$table->string('title')->nullable();
 			$table->text('content');
 			$table->text('content_plain');
-			$table->string('introduction')->nullable();
+			$table->string('introduction', 250)->nullable();
 			$table->string('cover_photo')->nullable();
 			$table->boolean('featured')->default(0);
 			$table->string('status')->default('DRAFT');

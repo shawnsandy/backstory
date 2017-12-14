@@ -118,10 +118,10 @@
         public function newForm($model = null)
         {
             if(!is_null($model)):
-            return Forms::model($model, ['url' => "/story/create/{$model->id}", "method" => "put", 'files' => true]);
+            return Forms::model($model, ['url' => "/story/create/{$model->id}", "method" => "put", 'files' => true, "class" => 'backstory']);
             endif;
 
-            return Forms::open(['url' => "/story/create", 'method' => 'post', 'files' => true]);
+            return Forms::open(['url' => "/story/create", 'method' => 'post', 'files' => true, "class" => 'backstory']);
         }
 
         /**
@@ -160,7 +160,7 @@
          */
         public function latestStories($limit = 10)
         {
-            return Story::latest()->take($limit)->get();
+            return Story::latest()->with('author')->take($limit)->get();
         }
 
         /**

@@ -7,5 +7,5 @@
 
 @endsection
 @section("sidebar")
-@include('backstory::forms.categories')
+
 @endsection
