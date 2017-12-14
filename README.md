@@ -46,9 +46,11 @@ Backstory::routes();
 
 Backstory requires the following dependencies
 
+__Img FLY__
+
 Install ImgFly - adds dynamic image resizing [download and full instructions](https://github.com/shawnsandy/img-fly)
 
-- Installs using composer repositories add the following to your `composer.json` file
+Installs using composer repositories add the following to your `composer.json` file
 
 ``` php
 "repositories": [
@@ -63,6 +65,9 @@ Install ImgFly - adds dynamic image resizing [download and full instructions](ht
 ```
 composer require shawnsandy/img-fly dev-master
 ```
+__Larvel Blade Directives__
+
+- Install info [please check the repo](https://github.com/appstract/laravel-blade-directives)
 
 ## Change log
 
