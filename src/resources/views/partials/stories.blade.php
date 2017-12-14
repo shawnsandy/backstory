@@ -1,5 +1,5 @@
 
-@foreach(backstory()->latestStories(10) as $story)
+@foreach(backstory()->latestStories(config('backstory.stories_per_page', 10)) as $story)
 <article class="content is-medium">
 <p class="is-small has-text-right">
 <div class="tags has-addons has-text-right">
