@@ -119,9 +119,10 @@ class Story extends Model
 
     public function getCoverAttribute()
     {
-    //    return "/imgfly/public/".$this->cover_photo.config("backstory.img.thumbs");
-    if($this->cover_photo)
+
+        if($this->cover_photo)
         return backstory()->imgFly($this->cover_photo, 'cover');
+
     }
 
 
