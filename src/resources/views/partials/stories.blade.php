@@ -1,6 +1,3 @@
-@php
-$stories = backstory()->latestStories();
-@endphp
 @foreach($stories as $story)
 <article class="content is-medium">
 <p class="is-small has-text-right">
