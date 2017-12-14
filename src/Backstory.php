@@ -180,5 +180,10 @@
             return "/imgfly/public/$image".config("backstory.img.$size");
         }
 
+        public function categories()
+        {
+            return StoryCategory::all();
+        }
+
 
     }

@@ -1,6 +1,6 @@
 # Backstory
 
-Tell Your Story. Backstory is a package for creating and editing, content in you laravel application.
+Tell Your Story. Backstory is a package for creating and editing, content in your laravel application.
 
 ## Install
 
@@ -83,12 +83,16 @@ __Larvel Blade Directives__
 
 ### Demo usage
 
-Backstory comes with a prebuilt sample of the application that you can use to demo its functionalities and features.
+Backstory comes with a prebuilt sample of the application that you can use to demo its functionalities and features. Dive the code for examples on how to integrate backstory in your app (tutorials coming soon).
 
 - Once installed you can view and create articles by visiting `yourapp.com/stories`
 - Click the create new story button
 - Before you create your story add some categories-- hit `add categories` button and add a coupe categories before you continue.
 - Now go ahead got ahead and create your story
+
+## TODO
+
+
 
 ## Change log
 

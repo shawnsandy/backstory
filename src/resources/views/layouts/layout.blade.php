@@ -59,7 +59,7 @@
                 </div>
                 </div>
 
-                <div class="column is-one-quarter">
+                <div class="column is-4">
                 <div class="container is-fluid">
                         @yield('sidebar')
                 </div>

@@ -8,4 +8,11 @@
 @endsection
 @section("sidebar")
 
+@component('backstory::components.categories')
+    <p class="is-size-4">
+    Story Categories
+    <hr>
+    </p>
+@endcomponent
+
 @endsection
