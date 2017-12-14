@@ -74,3 +74,17 @@
         width: 100%;
     }
 }
+/**
+ * Form Validation Errors
+ */
+
+.error {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font-style: italic;
+    margin-bottom: 1em;
+    padding: 5px;
+}

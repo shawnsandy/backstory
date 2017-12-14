@@ -60,19 +60,19 @@
         {
 
 //            return html()->text('title')->class($size)->placeholder($placeholder);
-            return Forms::text('title', null,  ["class" => $class, "placeholder" => $placeholder, 'required']);
+            return Forms::text('title', null,  ["class" => $class, "placeholder" => $placeholder, 'required', "maxlength" => 250]);
 
         }
 
         public function introduction($placeholder = 'Pitch (introduce) the story', $class = 'textarea is-medium')
         {
 //            return html()->textarea('introduction')->class($class)->placeholder($placeholder);
-            return Forms::textarea('introduction', null, ['class' => $class, 'placeholder' => $placeholder, 'rows' =>3]);
+            return Forms::textarea('introduction', null, ['class' => $class, 'placeholder' => $placeholder, 'rows' =>3, 'maxlength' => 250]);
         }
 
         public function content($placeholder = 'Lets write the next block buster', $class = ['textarea', 'content', 'is-medium'])
         {
-            return Forms::textarea('content', null, ['id' => 'content', 'class' => 'textarea content is-medium'] );
+            return Forms::textarea('content', null, ['id' => 'content', 'class' => 'textarea content is-medium', 'required'] );
         }
 
         /**
@@ -118,10 +118,10 @@
         public function newForm($model = null)
         {
             if(!is_null($model)):
-            return Forms::model($model, ['url' => "/story/create/{$model->id}", "method" => "put", 'files' => true, "class" => 'backstory']);
+            return Forms::model($model, ['url' => "/story/create/{$model->id}", "method" => "put", 'files' => true, "class" => 'backstory', 'data-validate']);
             endif;
 
-            return Forms::open(['url' => "/story/create", 'method' => 'post', 'files' => true, "class" => 'backstory']);
+            return Forms::open(['url' => "/story/create", 'method' => 'post', 'files' => true, "class" => 'backstory', 'data-validate']);
         }
 
         /**
