@@ -81,6 +81,13 @@ __Larvel Blade Directives__
 
 - Install info [please check the repo](https://github.com/appstract/laravel-blade-directives)
 
+### Basic usage
+
+- Once installed you can view and create articles by visiting `yourapp.com/stories`
+- Click the create new story button
+- Add some categories hit `add categories` button and add a coupe categories before you continue.
+- Now go ahead got ahead and create your story
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
