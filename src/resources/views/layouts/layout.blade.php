@@ -40,14 +40,14 @@
 
                 @include('backstory::components.modals-categories')
 
-            <div class="col-md-12">
-                @include('backstory::partials.messages')
-            </div>
+
         </div>
     </div>
 
     <section class="section">
-
+<div class="col-md-12">
+                @include('backstory::partials.messages')
+            </div>
         <div class="container">
            <div class="columns">
 
