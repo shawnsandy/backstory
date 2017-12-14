@@ -1,4 +1,4 @@
-# Backstory
+# Backstory (beta)
 
 Tell Your Story. Backstory is a package for creating and editing, content in your laravel application.
 
@@ -92,7 +92,10 @@ Backstory comes with a prebuilt sample of the application that you can use to de
 
 ## TODO
 
-
+- [ ] Add restful api for stories
+- [ ] Ajaxify / Reactive forms
+- [ ] Add vue/react components
+- [ ] Improve the docs
 
 ## Change log
 
