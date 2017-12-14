@@ -1,18 +1,11 @@
-<div class="box is-shadowless">
-        {{ $slot }}
-        <div class="card">
-        <div class="card-content">
-        <div class="content">
+<div class="box is-shadowless categories-list">
+ {{ $slot }}
+ <hr>
+    <div class="content">
         @foreach(Backstory::categories() as $item)
-        <p class="is-size-5 is-uppercase">
-            <a class="has-text-dark" href="/story/category/{{ $item->id }}">
+        <a class="has-text-dark button is-rounded" href="/story/category/{{ $item->id }}">
             {{ $item->name }}
-            </a>
-        </p>
+        </a>
         @endforeach
     </div>
-        </div>
-
-        </div>
-
 </div>

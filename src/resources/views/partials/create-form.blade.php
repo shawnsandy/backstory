@@ -66,12 +66,14 @@
 <script src="/assets/backstory/ckeditor/plugins/codesnippet/lib/highlight/styles/default.css"></script>
 @endpush
 
-@push('scripts')
+@pushonce('scripts:editor')
 <script src="/assets/backstory/ckeditor/ckeditor.js"></script>
 <script src="/assets/backstory/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
 <script src="/assets/backstory/choices/choices.min.js"></script>
+
+<script src="/assets/backstory/validate/validate.min.js"></script>
 <script>
 hljs.initHighlightingOnLoad();
-
+validate.init();
 </script>
-@endpush
+@endpushonce
