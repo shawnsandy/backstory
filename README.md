@@ -42,6 +42,18 @@ ShawnSandy\Backstory\BackstoryServiceProvider::class,
 Backstory::routes();
 ```
 
+### Migrate
+
+Run php artisan migrate to setup backstory tables
+
+```
+php artisan migrate
+```
+
+### Basic usage
+
+- Coming soon
+
 ### Dependencies
 
 Backstory requires the following dependencies
