@@ -64,8 +64,7 @@ class Story extends Model
 	     *
 	     * @param mixed $query
 	     * @param string $id
-	     * <code>Story::categoryId(1)->get();
-	</code>
+	     * <code>Story::categoryId(1)->get();</code>
 	     *
 	     * @return void
 	     */
@@ -83,6 +82,13 @@ class Story extends Model
 
 	}
 
+    /**
+     * Find stories by category id
+     *
+     * @param [type] $query
+     * @param [type] $id
+     * @return void
+     */
 	public function scopeHasCategory($query, $id)
 	{
 		return $query->with('categories', 'author')->whereHas('categories', function($qry) use($id) {
