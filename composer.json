@@ -54,7 +54,7 @@
                 "ShawnSandy\\Backstory\\BackstoryServicesProvider"
             ],
             "aliases": {
-                "Backstory": "ShawnSandy\\Backstory\\:BackstoryFacade"
+                "Backstory": "ShawnSandy\\Backstory\\BackstoryFacade"
             }
         }
     },
