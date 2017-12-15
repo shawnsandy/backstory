@@ -31,11 +31,11 @@
                 </p>
                 @auth
                 <p class="">
-                <a href="{{ config("backstory.stories.create_url") }}" class="button is-rounded is-light is-outlined">Create a new Story</a>
+                <a href="{{ config("backstory.stories.create_url") }}" class="button is-rounded is-light">Create a new Story</a>
 
 
 
-                <button type="button" class="button is-rounded is-light is-outlined manage-categories is-invisible">Add Categories</button>
+                <button type="button" class="button is-rounded is-light manage-categories is-invisible">Add Categories</button>
                 </p>
 
                 @endauth

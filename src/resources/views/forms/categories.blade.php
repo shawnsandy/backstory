@@ -15,7 +15,8 @@
     </div>
 </div>
 <div class="control">
-<button class="button is-info">Add Category</button>
+<button class="button is-info is-rounded">Add Category</button>
+<button type="button" class="button is-rounded close-box">Cancel</button>
 </div>
 
 {{ Form::close() }}
