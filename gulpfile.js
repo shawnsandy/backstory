@@ -44,6 +44,17 @@ gulp.task('copy:fonts', function() {
         .pipe(gulp.dest('./src/public/css/fonts/'));
 });
 
+gulp.task('copy:npm-assets', function(){
+
+    return gulp.src([
+        './node_modules/ckeditor/**/*.*',
+        './node_modules/choices.js/**/*.*',
+        './node_modules/validate/dist/js/validate.min.js',
+    ], {'base': "./node_modules"})
+    .pipe(gulp.dest('./src/npm'));
+
+} );
+
 
 
 gulp.task('sass', function() {
