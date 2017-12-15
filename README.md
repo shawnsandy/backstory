@@ -1,6 +1,16 @@
 # Backstory (beta)
 
-Tell Your Story. Backstory is a package for creating and editing, content in your laravel application.
+### Tell Your Story.
+Backstory is a Laravel package for creating and editing, content in your laravel application.
+
+## Features
+- Easily integrate into your application
+- WYSIWYG editor powered by CKEditor
+- Simple and easy image management
+- Dynamic on the fly image resizing using [PHPGlide](http://glide.thephpleague.com/)
+- OEMBED support
+- Easy to customize
+- more features coming soon.
 
 ## Install
 
@@ -50,10 +60,6 @@ Run php artisan migrate to setup backstory tables
 php artisan migrate
 ```
 
-### Basic usage
-
-- Coming soon
-
 ### Dependencies
 
 Backstory requires the following dependencies
@@ -81,7 +87,7 @@ __Larvel Blade Directives__
 
 - Install info [please check the repo](https://github.com/appstract/laravel-blade-directives)
 
-### Demo usage
+### Demo / Usage
 
 Backstory comes with a prebuilt sample of the application that you can use to demo its functionalities and features. Dive the code for examples on how to integrate backstory in your app (tutorials coming soon).
 
@@ -122,4 +128,3 @@ If you discover any security related issues, please email `shawnsandy04@gmail.co
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
