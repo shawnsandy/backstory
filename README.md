@@ -101,6 +101,7 @@ Backstory comes with a prebuilt sample of the application that you can use to de
 - [ ] Add restful api for stories
 - [ ] Ajaxify / Reactive forms
 - [ ] Add vue/react components
+- [ ] Bootstrap 4 views
 - [ ] Improve the docs
 
 ## Change log
