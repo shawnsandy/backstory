@@ -19,5 +19,9 @@
 @endsection
 
 @section("sidebar")
-@include('backstory::partials.latest-stories')
+@component('backstory::components.categories')
+    <p class="is-size-7 is-uppercase">
+    Story Categories
+    </p>
+@endcomponent
 @endsection
