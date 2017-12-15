@@ -56,10 +56,10 @@ $this->publishes(
 $this->publishes(
     [
 
-        __DIR__.'/../node_modules/ckeditor' => public_path('assets/backstory/ckeditor/'),
-        __DIR__.'/../node_modules/choices.js/assets/scripts/dist' => public_path('assets/backstory/choices/'),
-        __DIR__.'/../node_modules/choices.js/assets/styles/css' => public_path('assets/backstory/choices/'),
-        __DIR__.'/../node_modules/validate/dist/js/validate.min.js' => public_path('assets/backstory/validate/validate.min.js'),
+        __DIR__.'/npm/ckeditor' => public_path('assets/backstory/ckeditor/'),
+        __DIR__.'/npm/choices.js/assets/scripts/dist/' => public_path('assets/backstory/choices/'),
+        __DIR__.'/npm/choices.js/assets/styles/css' => public_path('assets/backstory/choices/'),
+        __DIR__.'/npm/validate/dist/js/validate.min.js' => public_path('assets/backstory/validate/validate.min.js'),
     ], 'backstory-vendor-assets'
 );
 
