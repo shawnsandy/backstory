@@ -1,9 +1,11 @@
 # Backstory (beta)
 
 ### Tell Your Story.
+
 Backstory is a Laravel package for creating and editing, content in your laravel application.
 
 ## Features
+
 - Easily integrate into your application
 - WYSIWYG editor powered by CKEditor
 - Simple and easy image management
@@ -58,6 +60,17 @@ Run php artisan migrate to setup backstory tables
 
 ```
 php artisan migrate
+```
+
+### Traits
+
+Add the following traits to your `App/User.php`
+
+```
+User extends Authenticatable {
+  use  Storify, HasRolesAndAbilities;
+    ...
+}
 ```
 
 ### Dependencies
