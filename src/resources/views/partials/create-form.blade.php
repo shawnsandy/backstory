@@ -1,11 +1,20 @@
 <div class="backstory">
 
     <div class="field">
-        {{ Backstory::label('Title', 'title') }}
+        {{ Backstory::label('What is the title of your story', 'title') }}
         <div class="control">
             {{ Backstory::title() }}
         </div>
     </div>
+
+
+    <div class="field">
+        {{ Backstory::label('Add a brief summary', 'introduction')->class('checkbox') }}
+        <div class="control">
+            {{ Backstory::introduction() }}
+        </div>
+    </div>
+
 
     @include('backstory::partials.editor')
 <hr>
@@ -13,13 +22,6 @@
 
  @include('backstory::partials.file-uploads',
     ['cover_photo' => isset($model->cover_photo) ? $model->cover_photo : null])
-
-    <div class="field">
-        {{ Backstory::label('Introduction', 'introduction')->class('checkbox') }}
-        <div class="control">
-            {{ Backstory::introduction() }}
-        </div>
-    </div>
 
 
     <div class="field">
@@ -32,7 +34,7 @@
     </div>
 
     <div class="field">
-        {{ Backstory::label('Featured', 'featured')->class('label') }}
+        {{ Backstory::label('Is this a featured story', 'featured')->class('label') }}
         <div class="control">
             <div class="is-fullwidth">
                 {{ Backstory::featured() }}

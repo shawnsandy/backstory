@@ -1,10 +1,4 @@
-<div class="editor-bar is-uppercase">
-    <div class="columns">
-        <div class="column is-3 has-text-light">
-            {{ Backstory::label('Content', 'content') }} {{--
-            <span class="tag is-dark"> :: </span> --}}
-        </div>
-        <div class="column has-text-right">
+
             <button type="button" class="image-button button is-small is-outlined">
                 <span class="icon">
                     <i class="fa fa-picture-o" aria-hidden="true"></i>
@@ -24,9 +18,7 @@
                 </span>
                 <span>Code</span>
             </button>  --}}
-        </div>
-    </div>
-</div>
+
 
 @push('scripts')
     <script>
@@ -39,29 +31,25 @@
 
     }
 
-    u(imageButton).on("click", function(e){
-        e.preventDefault();
+    u(imageButton).handle("click", function(e){
         console.log("button clicked")
         u('.image-modal').addClass('is-active');
     })
 
 
-    u(videoButton).on("click", function(e){
-        e.preventDefault();
+    u(videoButton).handle("click", function(e){
         console.log("button clicked")
         u('.video-modal').addClass('is-active');
     })
 
-    u(codeButton).on("click", function(e){
-        e.preventDefault();
+    u(codeButton).handle("click", function(e){
         console.log("button clicked")
         u('.code-modal').addClass('is-active');
     })
 
     var launchModals = function(button, modal){
 
-        u(button).on("click", function(e){
-        e.preventDefault();
+        u(button).handle("click", function(e){
         console.log("button clicked")
         u(modal).addClass('is-active');
     })
