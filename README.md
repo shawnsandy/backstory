@@ -54,6 +54,33 @@ ShawnSandy\Backstory\BackstoryServiceProvider::class,
 Backstory::routes();
 ```
 
+### Images Driver
+
+Add the images driver to the `config\filesystem.php`
+
+``` php
+
+        'images' => [
+            'driver' => 'local',
+            'root' => base_path('/public'),
+            'url' => env('APP_URL').'/public',
+            'visibility' => 'public',
+
+
+```
+
+### Publish vendor assets files
+
+* Publish vendor assets and files
+
+```
+php artisan vendor:publish --tag=backstory-assets
+```
+
+```
+php artisan vendor:publish --tag=backstory-vendor-assets
+```
+
 ### Migrate
 
 Run php artisan migrate to setup backstory tables
