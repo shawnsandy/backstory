@@ -122,9 +122,29 @@ class Story extends Model
 		}
 		return null;
 
-	}
+    }
 
-	public function getCategoryAttribute(){
+
+    public function scopeType($query, $type)
+    {
+        return $query->where('type', $type);
+    }
+
+
+    public function scopeStatus($query, $status)
+    {
+        return $query->where('status', $status);
+    }
+
+
+    public function scopePublished($query)
+    {
+
+        return $query->where('status', 'PUBLISHED');
+
+    }
+
+    public function getCategoryAttribute(){
 
 		return $this->categories->pluck(['id']);
 
