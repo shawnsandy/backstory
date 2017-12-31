@@ -46,8 +46,6 @@ class Story extends Model
 	     *
 	     * @param mixed $query
 	     * @param string $tag
-	     * <code> Story::getTag('red')->get();
-	</code>
 	     * @return void
 	     */
 	    public function scopeGetTag($query, $tag = null)
