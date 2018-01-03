@@ -75,11 +75,9 @@
     </footer>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/umbrellajs@2.9.0/umbrella.min.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/umbrellajs@2.9.0/umbrella.min.js"></script>
 @stack('scripts')
-@stack('inline_scripts')
-
-
+@stack('inline-scripts')
 </html>

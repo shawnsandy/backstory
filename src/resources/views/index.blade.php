@@ -16,3 +16,4 @@
 @endcomponent
 
 @endsection
+@include("backstory::partials.scripts")

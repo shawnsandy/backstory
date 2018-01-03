@@ -127,6 +127,26 @@ __Larvel Blade Directives__
 
 - Install info [please check the repo](https://github.com/appstract/laravel-blade-directives)
 
+``` php
+composer require appstract/laravel-blade-directives
+```
+
+__Scripts / Styles__
+
+- When adding Backstory to your custom pages add the following to your page `umbrellajs` and custom scripts to your layout blade
+
+``` blade
+<script src="https://cdn.jsdelivr.net/npm/umbrellajs@2.9.0/umbrella.min.js"></script>
+    @stack('scripts')
+    @stack('inline-scripts')
+```
+
+- Include the scripts on your editor / update blade (view)
+
+``` php
+    @include("backstory::partials.scripts")
+```
+
 ### Demo / Usage
 
 Backstory comes with a prebuilt sample of the application that you can use to demo its functionalities and features. Dive the code for examples on how to integrate backstory in your app (tutorials coming soon).
