@@ -1,12 +1,12 @@
 
-            <button type="button" class="image-button button is-small is-outlined">
+            <button type="button" class="image-button button is-small is-white">
                 <span class="icon">
                     <i class="fa fa-picture-o" aria-hidden="true"></i>
                 </span>
                 <span>Image</span>
 
             </button>
-            <button type="button" class="video-button button is-small">
+            <button type="button" class="video-button button is-small is-white">
                 <span class="icon">
                     <i class="fa fa-video-camera" aria-hidden="true"></i>
                 </span>

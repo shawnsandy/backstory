@@ -40,7 +40,7 @@ composer require shawnsandy/backstory dev-master
 ShawnSandy\Backstory\BackstoryServiceProvider::class,
 ```
 
-* Add the facade to your `config/..app.php` alias.
+* Add the facade to your `config/app.php` alias.
 
 ```
 "Backstory" => ShawnSandy\Backstory\BackstoryFacade::class,
