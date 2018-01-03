@@ -67,6 +67,8 @@ if (storyEditor) {
 
     })
 
+
+
 }
 
 u(".manage-categories").handle("click", function (e) {
