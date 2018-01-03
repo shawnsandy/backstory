@@ -3,7 +3,7 @@
 @endpush
 
 @push('scripts')
-<script src="https://cdn.jsdelivr.net/npm/umbrellajs@2.9.0/umbrella.min.js"></script>
+
 <script src="/assets/backstory/app.js"></script>
 @endpush
 
