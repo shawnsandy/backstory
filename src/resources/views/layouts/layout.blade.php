@@ -80,6 +80,6 @@
 <!-- Latest compiled and minified JavaScript -->
 @stack('scripts')
 @stack('inline_scripts')
-<script src="/assets/backstory/app.js"></script>
+
 
 </html>

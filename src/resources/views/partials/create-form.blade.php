@@ -65,7 +65,7 @@
 @push("styles")
 {{--  <link rel="stylesheet" href="/assets/backstory/choices/base.min.css">  --}}
 <link rel="stylesheet" href="/assets/backstory/choices/choices.min.css">
-<script src="/assets/backstory/ckeditor/plugins/codesnippet/lib/highlight/styles/default.css"></script>
+<link rel="stylesheet" href="/assets/backstory/ckeditor/plugins/codesnippet/lib/highlight/styles/default.css">
 @endpush
 
 @pushonce('scripts:editor')

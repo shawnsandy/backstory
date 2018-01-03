@@ -23,3 +23,10 @@
 @section("sidebar")
 @include('backstory::partials.latest-stories')
 @endsection
+@push('styles')
+    <link rel="stylesheet" href="/assets/backstory/backstory.css">
+@endpush
+
+@push('scripts')
+<script src="/assets/backstory/app.js"></script>
+@endpush
