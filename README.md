@@ -51,7 +51,24 @@ ShawnSandy\Backstory\BackstoryServiceProvider::class,
 * Add the route(s) to your `routes\web.php`
 
 ``` php
+
 Backstory::routes();
+
+Route::get("stories", function() {
+    $stories = backstory()->latestStories();
+
+ return view("backstory::index", compact('stories'));
+});
+
+Route::get('/story/category/{id}', function($id){
+
+    $stories = Story::hasCategory($id)
+    ->paginate(config('backstory.stories_per_page'));
+
+    return view("backstory::index", compact('stories'));
+
+});
+
 ```
 
 ### Images Driver
@@ -60,12 +77,11 @@ Add the images driver to the `config\filesystem.php`
 
 ``` php
 
-        'images' => [
-            'driver' => 'local',
-            'root' => base_path('/public'),
-            'url' => env('APP_URL').'/public',
-            'visibility' => 'public',
-
+    'images' => [
+    'driver' => 'local',
+    'root' => base_path('/public'),
+    'url' => env('APP_URL').'/public',
+    'visibility' => 'public',
 
 ```
 
@@ -111,18 +127,21 @@ Install ImgFly - adds dynamic image resizing [download and full instructions](ht
 Installs using composer repositories add the following to your `composer.json` file
 
 ``` php
+
 "repositories": [
         {
             "type": "vcs",
             "url": "https://github.com/shawnsandy/img-fly"
         }
     ],
+
 ```
 - Run the composer require to install the package
 
 ```
 composer require shawnsandy/img-fly dev-master
 ```
+
 __Larvel Blade Directives__
 
 - Install info [please check the repo](https://github.com/appstract/laravel-blade-directives)
