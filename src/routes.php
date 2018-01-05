@@ -13,14 +13,6 @@
 
 Route::group(["middleware" => ["auth"]], function () {
 
-    Route::view("create-story", "backstory::create");
-
-	Route::get("update-story/{id}", function($id) {
-
-		$model = Story::with(['author', 'categories'])->where("id", $id)->first();
-		return  view("backstory::update", compact('model'));
-
-	});
 
     Route::group(['prefix' => 'story', ], function(){
 

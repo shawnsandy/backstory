@@ -65,6 +65,15 @@ __Optional Routes__
 
 ``` php
 
+   Route::view("create-story", "backstory::create");
+
+	Route::get("update-story/{id}", function($id) {
+
+		$model = Story::with(['author', 'categories'])->where("id", $id)->first();
+		return  view("backstory::update", compact('model'));
+
+	});
+
 Route::get("stories", function() {
     $stories = backstory()->latestStories();
 
