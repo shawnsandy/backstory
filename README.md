@@ -19,17 +19,22 @@ Backstory is a Laravel package for creating and editing, content in your laravel
 - Installs using composer repositories add the following to your composer.json file
 
 ``` json
+
 "repositories": [
         {
             "type": "vcs",
             "url": "https://github.com/shawnsandy/backstory"
         }
     ],
+
 ```
 
 - Run the composer require to install the package
+
 ``` bash
+
 composer require shawnsandy/backstory dev-master
+
 ```
 
 ### In Laravel 5.5 and higher the package automatically installs itself. If you are running Laravel 5.4 or earlier please follow the instructions below.
@@ -40,7 +45,7 @@ composer require shawnsandy/backstory dev-master
 ShawnSandy\Backstory\BackstoryServiceProvider::class,
 ```
 
-* Add the facade to your `config/..app.php` alias.
+* Add the facade to your `config/app.php` alias.
 
 ```
 "Backstory" => ShawnSandy\Backstory\BackstoryFacade::class,
@@ -51,7 +56,30 @@ ShawnSandy\Backstory\BackstoryServiceProvider::class,
 * Add the route(s) to your `routes\web.php`
 
 ``` php
+
 Backstory::routes();
+
+```
+
+__Optional Routes__
+
+``` php
+
+Route::get("stories", function() {
+    $stories = backstory()->latestStories();
+
+ return view("backstory::index", compact('stories'));
+});
+
+Route::get('/story/category/{id}', function($id){
+
+    $stories = Story::hasCategory($id)
+    ->paginate(config('backstory.stories_per_page'));
+
+    return view("backstory::index", compact('stories'));
+
+});
+
 ```
 
 ### Images Driver
@@ -60,12 +88,11 @@ Add the images driver to the `config\filesystem.php`
 
 ``` php
 
-        'images' => [
-            'driver' => 'local',
-            'root' => base_path('/public'),
-            'url' => env('APP_URL').'/public',
-            'visibility' => 'public',
-
+    'images' => [
+    'driver' => 'local',
+    'root' => base_path('/public'),
+    'url' => env('APP_URL').'/public',
+    'visibility' => 'public',
 
 ```
 
@@ -111,18 +138,21 @@ Install ImgFly - adds dynamic image resizing [download and full instructions](ht
 Installs using composer repositories add the following to your `composer.json` file
 
 ``` php
+
 "repositories": [
         {
             "type": "vcs",
             "url": "https://github.com/shawnsandy/img-fly"
         }
     ],
+
 ```
 - Run the composer require to install the package
 
 ```
 composer require shawnsandy/img-fly dev-master
 ```
+
 __Larvel Blade Directives__
 
 - Install info [please check the repo](https://github.com/appstract/laravel-blade-directives)

@@ -29,18 +29,19 @@
                 <p class="subtitle is-4">
                 @yield("page_subtitle", "A Simple way to create content in laravel (post stories, articles, podcast)" )
                 </p>
+
                 @auth
                 <p class="">
-                <a href="{{ config("backstory.stories.create_url") }}" class="button is-rounded is-light">Create a new Story</a>
-
-
-
-                <button type="button" class="button is-rounded is-light manage-categories is-invisible">Add Categories</button>
-                </p>
-
+                <a href="{{ config("backstory.stories.create_url") }}" class="button is-rounded is-light">
+                    Create a new Story
+                </a>
                 @endauth
 
+                @auth
                 @include('backstory::components.modals-categories')
+                </p>
+                @endauth
+
 
 
         </div>

@@ -144,6 +144,11 @@ class Story extends Model
 
     }
 
+    public function scopeFullStory($query)
+    {
+        return $query->with(['author', 'categories']);
+    }
+
     public function getCategoryAttribute(){
 
 		return $this->categories->pluck(['id']);
@@ -167,7 +172,7 @@ class Story extends Model
 		if($this->cover_photo)
 		        return backstory()->imgFly($this->cover_photo, 'cover');
 
-	}
+    }
 
 
 }

@@ -1,5 +1,6 @@
 @if ($paginator->hasPages())
     <nav class="pagination is-centered">
+
         @if ($paginator->onFirstPage())
             <a class="pagination-previous is-rounded" disabled>Previous</a>
         @else
