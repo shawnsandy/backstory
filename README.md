@@ -19,17 +19,22 @@ Backstory is a Laravel package for creating and editing, content in your laravel
 - Installs using composer repositories add the following to your composer.json file
 
 ``` json
+
 "repositories": [
         {
             "type": "vcs",
             "url": "https://github.com/shawnsandy/backstory"
         }
     ],
+
 ```
 
 - Run the composer require to install the package
+
 ``` bash
+
 composer require shawnsandy/backstory dev-master
+
 ```
 
 ### In Laravel 5.5 and higher the package automatically installs itself. If you are running Laravel 5.4 or earlier please follow the instructions below.
@@ -53,6 +58,12 @@ ShawnSandy\Backstory\BackstoryServiceProvider::class,
 ``` php
 
 Backstory::routes();
+
+```
+
+__Optional Routes__
+
+``` php
 
 Route::get("stories", function() {
     $stories = backstory()->latestStories();

@@ -11,14 +11,6 @@
 
 
 
-Route::get("story/{id}", function($id){
-
-	$story = Story::with(['author', 'categories'])->where("id", $id)->first();
-	return view("backstory::story", compact("story"));
-
-}
-);
-
 Route::group(["middleware" => ["auth"]], function () {
 
     Route::view("create-story", "backstory::create");
