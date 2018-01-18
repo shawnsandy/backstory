@@ -6,17 +6,18 @@ use ShawnSandy\Backstory\App\Story;
 
 class BackStoryController extends StoryController
 {
-
     public function __construct()
     {
-
         $this->middleware('auth')->except('index', 'show');
-
     }
 
     public function index()
     {
+        if (request()->has('category')):
+
+        $stories = Story::fullStory()->hasCategory(request('category'))->paginate(config('backstory.stories_per_page')); else:
         $stories = backstory()->latestStories();
+        endif;
 
         return view('backstory::index', compact('stories'));
     }
