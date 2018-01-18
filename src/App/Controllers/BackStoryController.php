@@ -28,9 +28,9 @@ class BackStoryController extends StoryController
 
     public function show($id)
     {
-        $model = Story::with(['author', 'categories'])->where('id', $id)->first();
+        $story = Story::with(['author', 'categories'])->where('id', $id)->first();
 
-        return  view('backstory::update', compact('model'));
+        return  view('backstory::story', compact('story'));
     }
 
     public function edit($id)

@@ -7,7 +7,7 @@
 </div>
 </p>
     @if(!empty($story->cover))
-    <a href="{{ url("story") }}/{{ $story->id }}" class=""><img src="{{ $story->cover }}" alt=""></a>
+    <a href="{{ url("backstory") }}/{{ $story->id }}" class=""><img src="{{ $story->cover }}" alt=""></a>
     @endif
 
     <h1 class="is-uppercase title">
@@ -20,7 +20,7 @@
 
     <p class="has-text-right">
         <span class="">
-        <a href="{{ url("story") }}/{{ $story->id }}" class="is-link button is-outlined is-rounded">Read FullStory</a>
+        <a href="{{ url("backstory") }}/{{ $story->id }}" class="is-link button is-outlined is-rounded">Read FullStory</a>
         </span>
     </p>
     <hr>
