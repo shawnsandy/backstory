@@ -63,33 +63,7 @@ Backstory::routes();
 
 __Optional Routes__
 
-``` php
 
-   Route::view("create-story", "backstory::create");
-
-	Route::get("update-story/{id}", function($id) {
-
-		$model = Story::with(['author', 'categories'])->where("id", $id)->first();
-		return  view("backstory::update", compact('model'));
-
-	});
-
-Route::get("stories", function() {
-    $stories = backstory()->latestStories();
-
- return view("backstory::index", compact('stories'));
-});
-
-Route::get('/story/category/{id}', function($id){
-
-    $stories = Story::hasCategory($id)
-    ->paginate(config('backstory.stories_per_page'));
-
-    return view("backstory::index", compact('stories'));
-
-});
-
-```
 
 ### Images Driver
 
@@ -164,11 +138,13 @@ composer require shawnsandy/img-fly dev-master
 
 __Larvel Blade Directives__
 
-- Install info [please check the repo](https://github.com/appstract/laravel-blade-directives)
+- Run the composer require to install the package
 
 ``` php
 composer require appstract/laravel-blade-directives
 ```
+
+- Install info [please check the repo](https://github.com/appstract/laravel-blade-directives)
 
 __Scripts / Styles__
 
@@ -190,9 +166,9 @@ __Scripts / Styles__
 
 Backstory comes with a prebuilt sample of the application that you can use to demo its functionalities and features. Dive the code for examples on how to integrate backstory in your app (tutorials coming soon).
 
-- Once installed you can view and create articles by visiting `yourapp.com/stories`
-- Click the create new story button
-- Before you create your story add some categories-- hit `add categories` button and add a coupe categories before you continue.
+- Once installed you can view and create articles by visiting `yourapp.com/backstory`
+- Add some categories-- hit `add categories` button and add a coupe categories before you continue.
+- Click the create `new story` button
 - Now go ahead got ahead and create your story
 
 ## TODO
@@ -210,7 +186,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 ## Testing
 
 ``` bash
-$ composer test
+$ composer run phpstan
 ```
 
 ## Contributing
