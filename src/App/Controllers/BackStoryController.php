@@ -14,8 +14,9 @@ class BackStoryController extends StoryController
     public function index()
     {
         if (request()->has('category')):
-
-        $stories = Story::fullStory()->hasCategory(request('key'))->paginate(config('backstory.stories_per_page')); else:
+        $key = array_last(explode('-', request('category')));
+        $stories = Story::fullStory()->hasCategory($key)->paginate(config('backstory.stories_per_page'));
+        else:
         $stories = backstory()->latestStories();
         endif;
 
