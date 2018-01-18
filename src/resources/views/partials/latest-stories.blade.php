@@ -2,7 +2,7 @@
 <div class="content">
     @foreach(Backstory::latestStories() as $item)
     <p>
-        <a href="{{ config("backstory.stories.update_url", 'update-story' ) }}{{ $item->id }}" class="is-dark">{{ $item->title }}</a>
+        <a href="{{ config("backstory.stories.update_url", 'update-story' ) }}{{ $item->id }}/edit" class="is-dark">{{ $item->title }}</a>
     </p>
     @endforeach
 </div>
