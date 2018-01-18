@@ -24,7 +24,7 @@
         <div class="section hero is-light @yield("hero_class", "is-dark") ">
         <div class="container">
                 <h1 class="title is-1 is-large">
-                   <a href="/stories">@yield("page_title", "BackStory")</a>
+                   <a href="/backstory">@yield("page_title", "BackStory")</a>
                 </h1>
                 <p class="subtitle is-4">
                 @yield("page_subtitle", "A Simple way to create content in laravel (post stories, articles, podcast)" )
