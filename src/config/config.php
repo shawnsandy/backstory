@@ -15,8 +15,8 @@ return [
     'ARCHIVED' => 'ARCHIVED'
     ],
     'stories' => [
-    'create_url' => '/create-story/',
-    'update_url' => '/update-story/',
+    'create_url' => '/backstory/create/',
+    'update_url' => '/backstory/',
     ],
     'categories' => [],
     'img' => [

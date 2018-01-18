@@ -7,27 +7,36 @@
  * Time: 12:58 PM
  */
 
- use ShawnSandy\Backstory\App\Story;
+Route::resource('backstory', "\ShawnSandy\Backstory\App\Controllers\BackStoryController");
+
+ Route::group(['prefix' => 'story', ], function () {
+
+     Route::group(['middleware' => ['auth']], function () {
 
 
+         Route::resource(
+            '/create',
+            "\ShawnSandy\Backstory\App\Controllers\StoryController",
+        ['only' => ['store', 'update', 'destroy']]
+        );
 
-Route::group(["middleware" => ["auth"]], function () {
+         Route::resource(
+            '/options',
+            "\ShawnSandy\Backstory\App\Controllers\StoryOptionsController",
+        ['only' => ['store', 'update', 'destroy']]
+        );
 
+         Route::resource(
+            '/category',
+            "\ShawnSandy\Backstory\App\Controllers\CategoriesController",
+        ['only' => ['store', 'update', 'destroy']]
+        );
 
-    Route::group(['prefix' => 'story', ], function(){
+         Route::resource(
+            '/config',
+            "\ShawnSandy\Backstory\App\Controllers\OptionsController",
+        ['only' => ['store', 'update', 'destroy']]
+        );
+     });
 
-
-        Route::resource('/create', "\ShawnSandy\Backstory\App\Controllers\StoryController",
-	    ['only' => ["store", "update", "destroy"]]);
-
-        Route::resource('/options', "\ShawnSandy\Backstory\App\Controllers\StoryOptionsController",
-	    ['only' => ["store", "update", "destroy"]]);
-
-        Route::resource('/category', "\ShawnSandy\Backstory\App\Controllers\CategoriesController",
-	    ['only' => ["store", "update", "destroy"]]);
-
-        Route::resource('/options', "\ShawnSandy\Backstory\App\Controllers\OptionsController",
-	    ['only' => ["store", "update", "destroy"]]);
-    });
-
-});
+ });
