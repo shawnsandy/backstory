@@ -15,7 +15,7 @@ class BackStoryController extends StoryController
     {
         if (request()->has('category')):
 
-        $stories = Story::fullStory()->hasCategory(request('category'))->paginate(config('backstory.stories_per_page')); else:
+        $stories = Story::fullStory()->hasCategory(request('key'))->paginate(config('backstory.stories_per_page')); else:
         $stories = backstory()->latestStories();
         endif;
 
