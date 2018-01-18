@@ -11,6 +11,8 @@ Route::resource('backstory', "\ShawnSandy\Backstory\App\Controllers\BackStoryCon
 
  Route::group(['prefix' => 'story', ], function () {
 
+
+
      Route::group(['middleware' => ['auth']], function () {
 
 
